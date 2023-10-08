@@ -18,7 +18,7 @@ public class Controleur implements ActionListener {
         
         switch (clicks) {
             case "plus":
-                m.update(2);
+                m.update(1);
                 break;
             case "moins":
                 m.update(-1);

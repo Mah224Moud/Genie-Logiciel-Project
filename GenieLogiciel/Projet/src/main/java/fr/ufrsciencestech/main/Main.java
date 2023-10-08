@@ -11,7 +11,7 @@ import fr.ufrsciencestech.view.VueG;
 import fr.ufrsciencestech.view.VueGraphSwing;
 /**
  *
- * @author celine
+ * @author Mamoudou
  */
 public class Main {
     private VueG vueg;      //pour pouvoir changer de vue si on le souhaite

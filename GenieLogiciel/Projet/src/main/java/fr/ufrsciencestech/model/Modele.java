@@ -11,7 +11,7 @@ import java.beans.PropertyChangeSupport;
 
 /**
  *
- * @author celine
+ * @author Mamoudou
  */
 public class Modele {//extends Observable{
     private int compteur;   //compteur toujours positif

@@ -13,7 +13,7 @@ import java.beans.PropertyChangeListener;
 
 /**
  *
- * @author celine
+ * @author Mamoudou
  */
 public interface VueG extends PropertyChangeListener { //extends Observer {
     @Override

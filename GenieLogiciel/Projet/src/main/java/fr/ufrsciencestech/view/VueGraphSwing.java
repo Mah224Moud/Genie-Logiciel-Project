@@ -13,57 +13,108 @@ import javax.swing.*;
 
 /**
  *
- * @author celine
+ * @author Mamoudou
  */
-public class VueGraphSwing extends JFrame implements VueG{
+public class VueGraphSwing extends JFrame implements VueG {
+
     private JButton inc;
     private JButton dec;
-    private JLabel affiche;
     private JButton reset;
+
+    private JLabel affiche;
+
     private JPanel top;
+    private JPanel buttonPanel;
+
+    private JComboBox panierList;
     
-    public VueGraphSwing(){
-        super ("Panier");
+    private JTextArea info;
+
+    public VueGraphSwing() {
+        super("Panier");
+        instanciation();
+
+        initComponent();
+
+        initVariablesNames();
+        
+        initPanier();
+
+        vueSpecs();
+    }
+
+    public void vueSpecs() {
+        this.pack();
+        this.setVisible(true);
+        this.setMinimumSize(new Dimension(500, 400));
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void instanciation() {
         inc = new JButton("+");
         dec = new JButton("-");
         reset = new JButton("Reset");
-        top = new JPanel();
-        
-        
-        top.setLayout(new java.awt.GridLayout(1, 2));
-        top.add(inc);
-        top.add(dec);
-        
+
         affiche = new JLabel("0", JLabel.CENTER);
-        add(top, BorderLayout.NORTH);
-        add(reset, BorderLayout.SOUTH);
-        add(affiche, BorderLayout.CENTER);
+
+        top = new JPanel();
+        buttonPanel = new JPanel();
+
+        panierList = new JComboBox();
         
+        info = new JTextArea();
+    }
+
+    public void initComponent() {
+
+        panierList.setModel(new DefaultComboBoxModel<>());        
+
+        // top panel
+        top.setLayout(new java.awt.GridLayout(1, 2));
+        top.add(buttonPanel);
+        top.add(panierList);
+
+        // buttons panel
+        buttonPanel.setLayout(new java.awt.GridLayout(1, 3));
+        buttonPanel.add(inc);
+        buttonPanel.add(dec);
+        buttonPanel.add(reset);
+        
+        // textarea
+        info.setEditable(false);
+
+        // main panel
+        add(top, BorderLayout.NORTH);
+        add(affiche, BorderLayout.SOUTH);
+        add(info, BorderLayout.CENTER);
+    }
+
+    public void initVariablesNames() {
         inc.setName("plus");
         dec.setName("moins");
         reset.setName("reset");
         affiche.setName("Affichage");
-        this.pack();
-        this.setVisible(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        info.setName("info");
     }
     
-    public void addControleur(Controleur c){
+    public void initPanier(){
+        panierList.addItem("Orange");
+        panierList.addItem("Banane");
+    }
+
+    public void addControleur(Controleur c) {
         getInc().addActionListener(c);
         getDec().addActionListener(c);
         getReset().addActionListener(c);
     }
-    
-    
+
     //public void update(Observable m, Object compte){     //This method is called whenever the observed object is changed
     //      getAffiche().setText(((Integer) compte).toString());
     //}
     @Override
-    public void propertyChange(PropertyChangeEvent evt){
+    public void propertyChange(PropertyChangeEvent evt) {
         Modele m = (Modele) evt.getSource();
-        getAffiche().setText(((Integer)m.getCompteur()).toString());
-        
-        
+        getAffiche().setText(((Integer) m.getCompteur()).toString());
     }
 
     /**
@@ -101,8 +152,6 @@ public class VueGraphSwing extends JFrame implements VueG{
     public void setReset(JButton reset) {
         this.reset = reset;
     }
-    
-    
 
     /**
      * @return the affiche
