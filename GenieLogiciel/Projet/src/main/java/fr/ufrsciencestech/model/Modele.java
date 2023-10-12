@@ -6,40 +6,62 @@
 package fr.ufrsciencestech.model;
 
 //import java.util.Observable;
+import fr.ufrsciencestech.utils.ClassLister;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Mamoudou
  */
 public class Modele {//extends Observable{
+
     private int compteur;   //compteur toujours positif
-    
-    PropertyChangeSupport pcs = new  PropertyChangeSupport(this);
-	
+
+    PropertyChangeSupport pcs = new PropertyChangeSupport(this);
+
     public void addObserver(PropertyChangeListener l) {
-	pcs.addPropertyChangeListener("value", l);
+        pcs.addPropertyChangeListener("value", l);
     }
-    
-    public Modele(){
+
+    public Modele() {
         compteur = 0;
     }
+
     public void update(int incr) {
         int old = this.compteur;
         compteur += incr;
-        if(compteur < 0)
+        if (compteur < 0) {
             compteur = 0;
-        
+        }
+
         pcs.firePropertyChange("value", old, this.compteur);
         //setChanged();                //marks this Observable object as having been changed; the hasChanged method will now return true
         //notifyObservers(getCompteur());   //if this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed
     }
-    
-    public void reset(){
+
+    public void reset() {
         int old = getCompteur();
         setCompteur(0);
         pcs.firePropertyChange("value", old, getCompteur());
+    }
+
+    public List<String> getPanierList() {
+        List<String> donnees = new ArrayList<>();
+
+        List<String> classNames = ClassLister.listClassNamesInPackage("fr.ufrsciencestech.panier");
+        
+        for (String className : classNames) {
+            
+            if(!className.contains("Exception") || className.equals("Fruit"))
+            {
+                donnees.add(className);
+            }
+        }
+        
+        return donnees;
     }
 
     /**
@@ -55,12 +77,13 @@ public class Modele {//extends Observable{
     public void setCompteur(int compteur) {
         int old = this.compteur;
         this.compteur = compteur;
-        if(this.compteur < 0)
+        if (this.compteur < 0) {
             this.compteur = 0;
-        
+        }
+
         pcs.firePropertyChange("value", old, this.compteur);
         //setChanged();                //marks this Observable object as having been changed; the hasChanged method will now return true
         //notifyObservers(getCompteur());   //if this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed
     }
-    
+
 }

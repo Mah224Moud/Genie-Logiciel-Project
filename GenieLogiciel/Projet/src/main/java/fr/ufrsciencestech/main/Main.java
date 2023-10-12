@@ -9,14 +9,16 @@ import fr.ufrsciencestech.controller.Controleur;
 import fr.ufrsciencestech.model.*;
 import fr.ufrsciencestech.view.VueG;
 import fr.ufrsciencestech.view.VueGraphSwing;
+
 /**
  *
  * @author Mamoudou
  */
 public class Main {
+
     private VueG vueg;      //pour pouvoir changer de vue si on le souhaite
     private Controleur controleur;  //pour pouvoir changer de controleur si on le souhaite
-    
+
     /**
      * @return the vueg
      */
@@ -44,21 +46,20 @@ public class Main {
     public void setControleur(Controleur controleur) {
         this.controleur = controleur;
     }
-    
-    
-    public Main(){
-        //sans utiliser SpringIoC :
-        vueg = new VueGraphSwing();
-        controleur = new Controleur();
-        Modele modele = new Modele();
 
-        controleur.setModele(modele);                 
-        modele.addObserver(vueg);       
+    public Main() {
+        Modele modele = new Modele();
+        vueg = new VueGraphSwing();  // Initialisez d'abord la vue
+        controleur = new Controleur();
+
+        controleur.setModele(modele); // Initialisez le modèle dans le contrôleur
+        modele.addObserver(vueg);
         vueg.addControleur(controleur);
+        controleur.setVue(vueg);  // Assurez-vous que la vue est initialisée dans le contrôleur
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Main test = new Main();
-        
+
     }
 }

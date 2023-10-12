@@ -1,5 +1,14 @@
-fr/ufrsciencestech/main/Main.class
 fr/ufrsciencestech/view/VueGraphSwing.class
-fr/ufrsciencestech/view/VueG.class
+fr/ufrsciencestech/panier/Banane.class
+fr/ufrsciencestech/panier/Fraise.class
+fr/ufrsciencestech/panier/Fruit.class
+fr/ufrsciencestech/panier/Orange.class
 fr/ufrsciencestech/controller/Controleur.class
+fr/ufrsciencestech/panier/PanierPleinException.class
+fr/ufrsciencestech/utils/ClassLister.class
+fr/ufrsciencestech/panier/Ananas.class
+fr/ufrsciencestech/view/VueG.class
 fr/ufrsciencestech/model/Modele.class
+fr/ufrsciencestech/panier/PanierVideException.class
+fr/ufrsciencestech/panier/Cerise.class
+fr/ufrsciencestech/main/Main.class

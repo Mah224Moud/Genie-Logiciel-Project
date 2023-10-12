@@ -9,7 +9,9 @@ import fr.ufrsciencestech.controller.Controleur;
 import fr.ufrsciencestech.model.Modele;
 import java.awt.*;
 import java.beans.PropertyChangeEvent;
+import java.util.ArrayList;
 import javax.swing.*;
+import java.util.List;
 
 /**
  *
@@ -27,7 +29,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JPanel buttonPanel;
 
     private JComboBox panierList;
-    
+
     private JTextArea info;
 
     public VueGraphSwing() {
@@ -37,8 +39,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         initComponent();
 
         initVariablesNames();
-        
-        initPanier();
+       
 
         vueSpecs();
     }
@@ -61,13 +62,13 @@ public class VueGraphSwing extends JFrame implements VueG {
         buttonPanel = new JPanel();
 
         panierList = new JComboBox();
-        
+
         info = new JTextArea();
     }
 
     public void initComponent() {
 
-        panierList.setModel(new DefaultComboBoxModel<>());        
+        panierList.setModel(new DefaultComboBoxModel<>());
 
         // top panel
         top.setLayout(new java.awt.GridLayout(1, 2));
@@ -79,7 +80,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         buttonPanel.add(inc);
         buttonPanel.add(dec);
         buttonPanel.add(reset);
-        
+
         // textarea
         info.setEditable(false);
 
@@ -96,10 +97,13 @@ public class VueGraphSwing extends JFrame implements VueG {
         affiche.setName("Affichage");
         info.setName("info");
     }
-    
-    public void initPanier(){
-        panierList.addItem("Orange");
-        panierList.addItem("Banane");
+
+    public void initPanier(List<String> donnees) {
+        
+        panierList.removeAllItems();
+        for (String element : donnees) {
+            panierList.addItem(element);
+        }
     }
 
     public void addControleur(Controleur c) {
