@@ -2,9 +2,7 @@ package fr.ufrsciencestech.panier;
 
 /**
  *
-
  * @author roudet
-
  */
 public class Banane implements Fruit {
     private double prix;
@@ -60,19 +58,4 @@ public class Banane implements Fruit {
     public boolean isSeedless() { // predicat indiquant qu'une Banane a des pepins
         return false;
     }
-
-    /*
-     * public static void main(String[] args) {
-     * 
-     * Banane banane = new Banane();
-     * Banane bananeParams = new Banane(158, "Danemark");
-     * Banane bananeNegatif = new Banane(-3, "Allemagne");
-     * 
-     * System.out.println("Banane avec le const vide: " + banane);
-     * System.out.println("Banane avec les param initialisé: " + bananeParams);
-     * System.out.println("Banane avec le prix negatif: " + bananeNegatif);
-     * }
-     */
 }
-
- 

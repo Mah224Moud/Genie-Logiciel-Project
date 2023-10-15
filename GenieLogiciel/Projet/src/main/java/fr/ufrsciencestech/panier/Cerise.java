@@ -66,23 +66,4 @@ public class Cerise implements Fruit{
     public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
         return false;
     }
-
-
-    public static void main (String[] args){
-        //Ecrire ici vos tests
-        Cerise c1 = new Cerise();
-        Cerise c2 = new Cerise(1,"Colombie");
-        Cerise c3 = new Cerise(-10,"");
-        System.out.println("La cerise 1 : "+c1);
-        System.out.println("La cerise 2 : "+c2);
-        System.out.println("La cerise 3 : "+c3);
-        System.out.println("");
-        c1.setPrix(1.5);
-        c2.setOrigine("Portugal");
-        System.out.println("Prix cerise 1 : "+c1.getPrix());
-        System.out.println("Origine cerise 1 : "+c1.getOrigine());
-        System.out.println("");
-        System.out.println("Prix cerise 2 : "+c2.getPrix());
-        System.out.println("Origine cerise 2 : "+c2.getOrigine());
-   }
 }

@@ -5,20 +5,23 @@
  */
 package fr.ufrsciencestech.model;
 
-//import java.util.Observable;
+
 import fr.ufrsciencestech.utils.ClassLister;
+import fr.ufrsciencestech.utils.Panier;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 /**
  *
  * @author Mamoudou
  */
-public class Modele {//extends Observable{
+public class Modele extends Observable{
 
     private int compteur;   //compteur toujours positif
+    private Panier panier;
 
     PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 
@@ -47,6 +50,14 @@ public class Modele {//extends Observable{
         setCompteur(0);
         pcs.firePropertyChange("value", old, getCompteur());
     }
+    
+    public void setPanier(int contenanceMax){
+        panier = new Panier(contenanceMax);
+    }
+    
+    public Panier getPanier(){
+        return this.panier;
+    }
 
     public List<String> getPanierList() {
         List<String> donnees = new ArrayList<>();
@@ -73,6 +84,7 @@ public class Modele {//extends Observable{
 
     /**
      * @param compteur the compteur to set
+     * 
      */
     public void setCompteur(int compteur) {
         int old = this.compteur;

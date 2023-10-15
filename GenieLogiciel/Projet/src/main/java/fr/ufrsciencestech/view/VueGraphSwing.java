@@ -9,7 +9,6 @@ import fr.ufrsciencestech.controller.Controleur;
 import fr.ufrsciencestech.model.Modele;
 import java.awt.*;
 import java.beans.PropertyChangeEvent;
-import java.util.ArrayList;
 import javax.swing.*;
 import java.util.List;
 

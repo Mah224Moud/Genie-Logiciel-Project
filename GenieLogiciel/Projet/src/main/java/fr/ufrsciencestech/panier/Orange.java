@@ -61,9 +61,4 @@ public class Orange implements Fruit{
         return false;
     }
 
-
-    public static void main (String[] args){
-        //Ecrire ici vos tests
-	System.out.println("premier test Orange");
-   }
 }
