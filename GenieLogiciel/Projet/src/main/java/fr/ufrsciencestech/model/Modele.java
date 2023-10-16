@@ -66,7 +66,7 @@ public class Modele extends Observable{
         
         for (String className : classNames) {
             
-            if(!className.contains("Exception") || className.equals("Fruit"))
+            if(!className.contains("Exception") && !className.contains("Fruit"))
             {
                 donnees.add(className);
             }

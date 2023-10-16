@@ -8,6 +8,7 @@ package fr.ufrsciencestech.view;
 import fr.ufrsciencestech.controller.Controleur;
 import fr.ufrsciencestech.model.Modele;
 import java.awt.*;
+import java.awt.event.ItemListener;
 import java.beans.PropertyChangeEvent;
 import javax.swing.*;
 import java.util.List;
@@ -46,7 +47,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void vueSpecs() {
         this.pack();
         this.setVisible(true);
-        this.setMinimumSize(new Dimension(500, 400));
+        this.setMinimumSize(new Dimension(800, 500));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -110,6 +111,14 @@ public class VueGraphSwing extends JFrame implements VueG {
         getDec().addActionListener(c);
         getReset().addActionListener(c);
     }
+    public String getSelectedPanierItem() {
+    Object selectedItem = panierList.getSelectedItem();
+    if (selectedItem != null) {
+        return selectedItem.toString();
+    }
+    return null;
+}
+
 
     //public void update(Observable m, Object compte){     //This method is called whenever the observed object is changed
     //      getAffiche().setText(((Integer) compte).toString());
@@ -169,4 +178,22 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void setAffiche(JLabel affiche) {
         this.affiche = affiche;
     }
+
+    public JComboBox getPanierList() {
+        return panierList;
+    }
+
+    public void setPanierList(JComboBox panierList) {
+        this.panierList = panierList;
+    }
+
+    public JTextArea getInfo() {
+        return info;
+    }
+
+    public void setInfo(String text) {
+        info.setText(text);
+    }
+    
+    
 }
