@@ -4,66 +4,20 @@ package fr.ufrsciencestech.panier;
  *
  * @author roudet
  */
-public class Cerise implements Fruit{
-    private double prix;
-    private String origine;
-	
+public class Cerise extends SimpleFruit{
+    
     public Cerise() 
     {
-        this.prix = 0.6;  //prix en euros
-        this.origine="Italie";
+        this(0.6, "Italie");
     }
     
     public Cerise(double prix, String origine) 
     {
-	if(prix < 0)
-	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
-	else
-	    this.prix = prix;
-
-	if(origine.equals("") || origine == null)
-            this.origine = "Italie";  //Espagne par défaut
-	else
-            this.origine = origine;   
-    }
-
-    public double getPrix(){
-	return prix;
-    }
-
-    public void setPrix(double prix){
-    	if(prix >= 0)
-		this.prix=prix;
-	else 
-		System.out.println("Il n'est pas possible de donner un prix négatif");
-    }
-
-    public String getOrigine(){
-	return origine;
-    }
- 
-    public void setOrigine(String origine){
-    	if(origine.equals("") || origine == null)
-            System.out.println("Origine invalide, rentrez une origine avec au minimum un caractère");
-	else
-		this.origine=origine;
+	super(prix, origine);
     }
 
     @Override
     public String toString(){
-        return "Cerise de " + origine + " a " + prix + " euros";
-    }
-
-    @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
-        if(o != null && getClass() == o.getClass()){
-            Cerise cer = (Cerise) o;
-            return (prix == cer.prix && origine.equals(cer.origine));
-        }
-        return false;
-    }
-
-    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
-        return false;
+        return "Cerise de " + this.getOrigine() + " à " + this.getPrix() + " €";
     }
 }

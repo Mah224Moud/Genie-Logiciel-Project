@@ -41,7 +41,8 @@ public class Controleur implements ActionListener {
             default:
                 JOptionPane.showMessageDialog(null, "Attention cette action n'est pas valide");
         }
-    } else if (e.getSource() instanceof JComboBox) {
+    }
+    if (e.getSource() instanceof JComboBox) {
         // L'action est déclenchée par la liste (JComboBox)
         JComboBox<String> sourceList = (JComboBox<String>) e.getSource();
         String selectedValue = (String) sourceList.getSelectedItem();
@@ -76,4 +77,14 @@ public class Controleur implements ActionListener {
         this.vg = vg;
         updatePanier();
     }
+    
+    /*private Fruit createFruit(String name, List<String> fruits){
+        
+        if(fruits.contains(name)){
+            return new name()(Fruit);
+        }
+        
+        return null;
+        
+    }*/
 }
