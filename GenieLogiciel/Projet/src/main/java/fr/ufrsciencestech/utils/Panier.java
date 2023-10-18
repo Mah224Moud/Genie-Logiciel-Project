@@ -8,7 +8,7 @@ import java.util.*;
  * @author roudet
  */
 public class Panier {
-    
+
     private ArrayList<Fruit> fruits; // attribut pour stocker les fruits
     private int contenanceMax; // nb maximum d'oranges que peut contenir le panier
 
@@ -18,31 +18,51 @@ public class Panier {
         this.fruits = new ArrayList<Fruit>();
         this.contenanceMax = contenanceMax;
     }
-    
+
     public String toString() { // affichage de ce qui est contenu dans le panier : liste des fruits presents
-        String res = "";
-        String newLine = System.getProperty("line.separator");
-        for (int i = 0; i < fruits.size(); i++) {
-            res += fruits.get(i).toString() + newLine;
+        Map<String, Integer> fruitCount = new HashMap<>();
+        StringBuilder res = new StringBuilder("Contenu du panier : \n\n");
+
+        if (this.getTaillePanier() > 0) {
+            for (Fruit fruit : fruits) {
+                String fruitName = fruit.toString(); // Obtient le résultat de toString du fruit
+                fruitCount.put(fruitName, fruitCount.getOrDefault(fruitName, 0) + 1);
+            }
+
+            for (Map.Entry<String, Integer> entry : fruitCount.entrySet()) {
+                String fruitName = entry.getKey();
+                int quantity = entry.getValue();
+
+                res.append(quantity).append(" x ").append(fruitName).append("\n");
+            }
+
+            if (this.getTaillePanier() > 1) {
+                res.append("\nLe panier contient " + this.getTaillePanier() + " fruits");
+            } else {
+                res.append("\nLe panier contient " + this.getTaillePanier() + " fruit");
+            }
+            res.append(" avec une valeur total de ").append(this.getPrix()).append("€");
+            
+        } else {
+            res.append("\nLe panier ne contient aucun fruit il est complètement vide !!!");
         }
         
-        res+= "\n\nLe panier contentient actuellement "+this.getTaillePanier()+" fruit(s) sur "+this.getContenanceMax()+" et vaut "+this.getPrix()+"€";
-        return res;
+        return res.toString();
     }
 
     // groupe 2
     public ArrayList<Fruit> getFruits() { // accesseur du premier attribut
         return this.fruits;
     }
-    
+
     public void setFruits(ArrayList<Fruit> fruits) { // modificateur du premier attribut
         this.fruits = fruits;
     }
-    
+
     public int getTaillePanier() { // accesseur retournant la taille allouee pour l'attibut fruits
         return this.fruits.size();
     }
-    
+
     public int getContenanceMax() { // accesseur du second attribut
         return this.contenanceMax;
     }
@@ -65,18 +85,18 @@ public class Panier {
             throw new PanierPleinException();
         }
     }
-    
+
     public void setFruit(int i, Fruit f) { // modificateur du fruit contenu dans le panier a l'emplacement n°i par f
         // (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
         if (i >= 0 && i < fruits.size() && fruits.get(i) != null) {
             fruits.set(i, f);
         }
     }
-    
+
     public boolean estVide() { // predicat indiquant que le panier est vide
         return this.fruits.isEmpty();
     }
-    
+
     public boolean estPlein() { // predicat indiquant que le panier est plein
         return this.fruits.size() == contenanceMax;
     }
@@ -128,12 +148,11 @@ public class Panier {
         }
         return false;
     }
-    
-    
-    public String clearAll(){
-        if(this.estVide()){
+
+    public String clearAll() {
+        if (this.estVide()) {
             return "Le panier est dèjà vide !!!";
-        }else{
+        } else {
             this.fruits.clear();
             return "Le panier a été complètement vidé.";
         }
