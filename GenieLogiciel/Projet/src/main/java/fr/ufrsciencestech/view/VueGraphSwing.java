@@ -194,6 +194,4 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void setInfo(String text) {
         info.setText(text);
     }
-    
-    
 }

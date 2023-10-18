@@ -79,7 +79,7 @@ public class Controleur implements ActionListener {
 
     public void updatePanier() {
         List<String> donnees = m.getPanierList();
-        vg.initPanier(donnees);
+        vue.initPanier(donnees);
         m.setPanier(25);
     }
 
@@ -92,16 +92,7 @@ public class Controleur implements ActionListener {
         this.vue = (VueGraphSwing) vg;
         updatePanier();
     }
-
-    /*private Fruit createFruit(String name, List<String> fruits){
-        
-        if(fruits.contains(name)){
-            return new name()(Fruit);
-        }
-        
-        return null;
-        
-    }*/
+    
     public Fruit createFruit(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         Class<?> fruitClass = Class.forName(className);
         if (Fruit.class.isAssignableFrom(fruitClass)) {

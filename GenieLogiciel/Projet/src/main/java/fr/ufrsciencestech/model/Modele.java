@@ -71,7 +71,6 @@ public class Modele extends Observable{
                 donnees.add(className);
             }
         }
-        
         return donnees;
     }
 

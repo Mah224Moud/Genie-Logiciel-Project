@@ -10,5 +10,4 @@ public class PanierPleinException extends Exception {
     {
 	super("Ajout impossible car le panier est plein !");
     }
-
 }

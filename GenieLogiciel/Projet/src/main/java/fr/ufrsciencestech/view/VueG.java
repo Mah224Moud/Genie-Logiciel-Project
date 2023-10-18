@@ -20,8 +20,5 @@ public interface VueG extends PropertyChangeListener { //extends Observer {
     @Override
     public void propertyChange(PropertyChangeEvent evt);
     //public void update(Observable m, Object o);
-    public void addControleur(Controleur c);
-    
-    public void initPanier(List<String> donnees);
-    
+    public void addControleur(Controleur c);    
 }
