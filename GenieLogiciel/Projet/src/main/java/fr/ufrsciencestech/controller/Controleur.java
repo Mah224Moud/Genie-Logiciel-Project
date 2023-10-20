@@ -78,6 +78,9 @@ public class Controleur implements ActionListener {
     
     public void clear(){
         vue.setInfo(m.getPanier().clearAll());
+        List<String> countries = m.getPanier().getOrigines();
+        countries.clear();
+        vue.initCountries(countries);
     }
 
     public void updatePanier() {
@@ -88,7 +91,6 @@ public class Controleur implements ActionListener {
     
     public void updateCountries(){
         List<String> countries = m.getPanier().getOrigines();
-        System.out.println(countries);
         vue.initCountries(countries);
     }
 

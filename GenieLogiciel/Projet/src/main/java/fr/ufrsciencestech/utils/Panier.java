@@ -11,12 +11,14 @@ public class Panier {
 
     private ArrayList<Fruit> fruits; // attribut pour stocker les fruits
     private int contenanceMax; // nb maximum d'oranges que peut contenir le panier
+    private List<String> origines; // pour stocker les origines
 
     // groupe 1
     public Panier(int contenanceMax) { // initialise un panier vide ayant une certaine contenance maximale (precisee en
         // parametre)
         this.fruits = new ArrayList<Fruit>();
         this.contenanceMax = contenanceMax;
+        this.origines = new ArrayList<>();
     }
 
     public String toString() { // affichage de ce qui est contenu dans le panier : liste des fruits presents
@@ -154,20 +156,29 @@ public class Panier {
             return "Le panier est dèjà vide !!!";
         } else {
             this.fruits.clear();
+            this.origines.clear();
             return "Le panier a été complètement vidé.";
         }
     }
 
-    public List<String> getOrigines() {
+    public List<String> getOriginesSansDoublons() {
         List<String> originesDoublons = new ArrayList<>();
 
         for (Fruit fruit : this.getFruits()) {
             originesDoublons.add(fruit.getOrigine());
         }
 
-        HashSet<String> origines = new HashSet<>(originesDoublons);
+        HashSet<String> originesSansDoublons = new HashSet<>(originesDoublons);
+        
 
-        return new ArrayList<>(origines);
+        return new ArrayList<>(originesSansDoublons);
     }
+    
+    public List<String> getOrigines() {
+        return this.origines = getOriginesSansDoublons();
+    }
+    
+    
+    
 
 }
