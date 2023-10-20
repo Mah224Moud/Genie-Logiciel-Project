@@ -138,6 +138,13 @@ public class VueGraphSwing extends JFrame implements VueG {
             panierList.addItem(element);
         }
     }
+    
+    public void initCountries(List<String> countries){
+        countryList.removeAllItems();
+        for (String element : countries) {
+            countryList.addItem(element);
+        }
+    }
 
     public void addControleur(Controleur c) {
         getInc().addActionListener(c);

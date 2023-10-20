@@ -42,11 +42,11 @@ public class Panier {
                 res.append("\nLe panier contient " + this.getTaillePanier() + " fruit");
             }
             res.append(" avec une valeur total de ").append(this.getPrix()).append("€");
-            
+
         } else {
             res.append("\nLe panier ne contient aucun fruit il est complètement vide !!!");
         }
-        
+
         return res.toString();
     }
 
@@ -157,4 +157,17 @@ public class Panier {
             return "Le panier a été complètement vidé.";
         }
     }
+
+    public List<String> getOrigines() {
+        List<String> originesDoublons = new ArrayList<>();
+
+        for (Fruit fruit : this.getFruits()) {
+            originesDoublons.add(fruit.getOrigine());
+        }
+
+        HashSet<String> origines = new HashSet<>(originesDoublons);
+
+        return new ArrayList<>(origines);
+    }
+
 }

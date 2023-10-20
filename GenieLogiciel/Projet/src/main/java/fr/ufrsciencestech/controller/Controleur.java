@@ -32,10 +32,12 @@ public class Controleur implements ActionListener {
                 if(!m.getPanier().estPlein())
                     m.update(1);
                 add();
+                updateCountries();
                 break;
             case "moins":
                 m.update(-1);
                 del();
+                updateCountries();
                 break;
             case "reset":
                 m.reset();
@@ -83,6 +85,12 @@ public class Controleur implements ActionListener {
         vue.initPanier(donnees);
         m.setPanier(25);
     }
+    
+    public void updateCountries(){
+        List<String> countries = m.getPanier().getOrigines();
+        System.out.println(countries);
+        vue.initCountries(countries);
+    }
 
     public void setModele(Modele m) {
         this.m = m;
@@ -92,6 +100,7 @@ public class Controleur implements ActionListener {
         this.vg = vg;
         this.vue = (VueGraphSwing) vg;
         updatePanier();
+        updateCountries();
     }
     
     public Fruit createFruit(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
