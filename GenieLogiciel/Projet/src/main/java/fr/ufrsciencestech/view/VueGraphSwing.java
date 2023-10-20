@@ -22,13 +22,22 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JButton inc;
     private JButton dec;
     private JButton reset;
+    private JButton boycotte;
 
-    private JLabel affiche;
+    private JLabel compteur;
+    private JLabel boycotteAffichage;
+    private JLabel boycotteInfo;
 
     private JPanel top;
+    private JPanel topLeft;
+    private JPanel topRight;
+    private JPanel bottom;
+    private JPanel emptyPanel;
+
     private JPanel buttonPanel;
 
     private JComboBox panierList;
+    private JComboBox countryList;
 
     private JTextArea info;
 
@@ -39,7 +48,6 @@ public class VueGraphSwing extends JFrame implements VueG {
         initComponent();
 
         initVariablesNames();
-       
 
         vueSpecs();
     }
@@ -47,7 +55,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void vueSpecs() {
         this.pack();
         this.setVisible(true);
-        this.setMinimumSize(new Dimension(800, 500));
+        this.setMinimumSize(new Dimension(1000, 500));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -55,12 +63,20 @@ public class VueGraphSwing extends JFrame implements VueG {
         inc = new JButton("+");
         dec = new JButton("-");
         reset = new JButton("Reset");
+        boycotte = new JButton("Boycotter");
 
-        affiche = new JLabel("0", JLabel.CENTER);
+        compteur = new JLabel("0", JLabel.CENTER);
+        boycotteAffichage = new JLabel("", JLabel.CENTER);
+        boycotteInfo = new JLabel("Liste des pays", JLabel.CENTER);
 
         top = new JPanel();
-        buttonPanel = new JPanel();
-
+        bottom = new JPanel();
+        topLeft = new JPanel();
+        topRight = new JPanel();
+        emptyPanel = new JPanel();
+        
+        
+        countryList = new JComboBox();
         panierList = new JComboBox();
 
         info = new JTextArea();
@@ -69,24 +85,41 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void initComponent() {
 
         panierList.setModel(new DefaultComboBoxModel<>());
+        countryList.setModel(new DefaultComboBoxModel<>());
 
         // top panel
-        top.setLayout(new java.awt.GridLayout(1, 2));
-        top.add(buttonPanel);
-        top.add(panierList);
+        top.setLayout(new java.awt.GridLayout(1, 3));
+        top.add(topLeft);
+        top.add(emptyPanel);
+        top.add(topRight);
 
-        // buttons panel
-        buttonPanel.setLayout(new java.awt.GridLayout(1, 3));
-        buttonPanel.add(inc);
-        buttonPanel.add(dec);
-        buttonPanel.add(reset);
+        // topLeft panel
+        topLeft.setLayout(new java.awt.GridLayout(1, 3));
+        topLeft.add(inc);
+        topLeft.add(dec);
+        topLeft.add(panierList);
+
+        // topRight panel
+        topRight.setLayout(new java.awt.GridLayout(1, 3));
+        topRight.add(boycotteInfo);
+        topRight.add(countryList);
+        topRight.add(boycotte);
+        
+        // topCenter panel
+        emptyPanel.setBackground(Color.gray);
+
+        // bottom panel
+        bottom.setLayout(new java.awt.GridLayout(1, 3));
+        bottom.add(compteur);
+        bottom.add(reset);
+        bottom.add(boycotteAffichage);
 
         // textarea
         info.setEditable(false);
 
         // main panel
         add(top, BorderLayout.NORTH);
-        add(affiche, BorderLayout.SOUTH);
+        add(bottom, BorderLayout.SOUTH);
         add(info, BorderLayout.CENTER);
     }
 
@@ -94,12 +127,12 @@ public class VueGraphSwing extends JFrame implements VueG {
         inc.setName("plus");
         dec.setName("moins");
         reset.setName("reset");
-        affiche.setName("Affichage");
+        compteur.setName("Affichage");
         info.setName("info");
     }
 
     public void initPanier(List<String> donnees) {
-        
+
         panierList.removeAllItems();
         for (String element : donnees) {
             panierList.addItem(element);
@@ -110,15 +143,16 @@ public class VueGraphSwing extends JFrame implements VueG {
         getInc().addActionListener(c);
         getDec().addActionListener(c);
         getReset().addActionListener(c);
+        getBoycotte().addActionListener(c);
     }
-    public String getSelectedPanierItem() {
-    Object selectedItem = panierList.getSelectedItem();
-    if (selectedItem != null) {
-        return selectedItem.toString();
-    }
-    return null;
-}
 
+    public String getSelectedPanierItem() {
+        Object selectedItem = panierList.getSelectedItem();
+        if (selectedItem != null) {
+            return selectedItem.toString();
+        }
+        return null;
+    }
 
     //public void update(Observable m, Object compte){     //This method is called whenever the observed object is changed
     //      getAffiche().setText(((Integer) compte).toString());
@@ -169,14 +203,14 @@ public class VueGraphSwing extends JFrame implements VueG {
      * @return the affiche
      */
     public JLabel getAffiche() {
-        return affiche;
+        return compteur;
     }
 
     /**
      * @param affiche the affiche to set
      */
-    public void setAffiche(JLabel affiche) {
-        this.affiche = affiche;
+    public void setAffiche(JLabel compteur) {
+        this.compteur = compteur;
     }
 
     public JComboBox getPanierList() {
@@ -194,4 +228,85 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void setInfo(String text) {
         info.setText(text);
     }
+
+    public JButton getBoycotte() {
+        return boycotte;
+    }
+
+    public void setBoycotte(JButton boycotte) {
+        this.boycotte = boycotte;
+    }
+
+    public JLabel getCompteur() {
+        return compteur;
+    }
+
+    public void setCompteur(JLabel compteur) {
+        this.compteur = compteur;
+    }
+
+    public JLabel getBoycotteAffichage() {
+        return boycotteAffichage;
+    }
+
+    public void setBoycotteAffichage(JLabel boycotteAffichage) {
+        this.boycotteAffichage = boycotteAffichage;
+    }
+
+    public JLabel getBoycotteInfo() {
+        return boycotteInfo;
+    }
+
+    public void setBoycotteInfo(JLabel boycotteInfo) {
+        this.boycotteInfo = boycotteInfo;
+    }
+
+    public JPanel getTop() {
+        return top;
+    }
+
+    public void setTop(JPanel top) {
+        this.top = top;
+    }
+
+    public JPanel getTopLeft() {
+        return topLeft;
+    }
+
+    public void setTopLeft(JPanel topLeft) {
+        this.topLeft = topLeft;
+    }
+
+    public JPanel getTopRight() {
+        return topRight;
+    }
+
+    public void setTopRight(JPanel topRight) {
+        this.topRight = topRight;
+    }
+
+    public JPanel getBottom() {
+        return bottom;
+    }
+
+    public void setBottom(JPanel bottom) {
+        this.bottom = bottom;
+    }
+
+    public JPanel getButtonPanel() {
+        return buttonPanel;
+    }
+
+    public void setButtonPanel(JPanel buttonPanel) {
+        this.buttonPanel = buttonPanel;
+    }
+
+    public JComboBox getCountryList() {
+        return countryList;
+    }
+
+    public void setCountryList(JComboBox countryList) {
+        this.countryList = countryList;
+    }
+
 }
