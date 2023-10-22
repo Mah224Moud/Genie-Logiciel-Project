@@ -34,8 +34,6 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JPanel bottom;
     private JPanel emptyPanel;
 
-    private JPanel buttonPanel;
-
     private JComboBox panierList;
     private JComboBox countryList;
 
@@ -129,6 +127,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         reset.setName("reset");
         compteur.setName("Affichage");
         info.setName("info");
+        boycotte.setName("boycotte");
     }
 
     public void initPanier(List<String> donnees) {
@@ -160,6 +159,14 @@ public class VueGraphSwing extends JFrame implements VueG {
         }
         return null;
     }
+    
+    public String getSelectedCountryItem() {
+        Object selectedItem = countryList.getSelectedItem();
+        if (selectedItem != null) {
+            return selectedItem.toString();
+        }
+        return null;
+    }
 
     //public void update(Observable m, Object compte){     //This method is called whenever the observed object is changed
     //      getAffiche().setText(((Integer) compte).toString());
@@ -168,6 +175,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void propertyChange(PropertyChangeEvent evt) {
         Modele m = (Modele) evt.getSource();
         getAffiche().setText(((Integer) m.getCompteur()).toString());
+        getBoycotteAffichage().setText(m.getCountry());
     }
 
     /**
@@ -266,46 +274,6 @@ public class VueGraphSwing extends JFrame implements VueG {
 
     public void setBoycotteInfo(JLabel boycotteInfo) {
         this.boycotteInfo = boycotteInfo;
-    }
-
-    public JPanel getTop() {
-        return top;
-    }
-
-    public void setTop(JPanel top) {
-        this.top = top;
-    }
-
-    public JPanel getTopLeft() {
-        return topLeft;
-    }
-
-    public void setTopLeft(JPanel topLeft) {
-        this.topLeft = topLeft;
-    }
-
-    public JPanel getTopRight() {
-        return topRight;
-    }
-
-    public void setTopRight(JPanel topRight) {
-        this.topRight = topRight;
-    }
-
-    public JPanel getBottom() {
-        return bottom;
-    }
-
-    public void setBottom(JPanel bottom) {
-        this.bottom = bottom;
-    }
-
-    public JPanel getButtonPanel() {
-        return buttonPanel;
-    }
-
-    public void setButtonPanel(JPanel buttonPanel) {
-        this.buttonPanel = buttonPanel;
     }
 
     public JComboBox getCountryList() {

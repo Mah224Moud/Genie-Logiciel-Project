@@ -29,8 +29,9 @@ public class Controleur implements ActionListener {
 
         switch (clicks) {
             case "plus":
-                if(!m.getPanier().estPlein())
+                if (!m.getPanier().estPlein()) {
                     m.update(1);
+                }
                 add();
                 updateCountries();
                 break;
@@ -42,6 +43,17 @@ public class Controleur implements ActionListener {
             case "reset":
                 m.reset();
                 clear();
+                break;
+            case "boycotte":
+                String selectCountry = vue.getSelectedCountryItem();
+                m.setCountry(selectCountry);
+                if (selectCountry != null) {
+                    m.getPanier().boycotteOrigine(selectCountry);
+                    vue.setInfo(m.getPanier().toString());
+                    updateCountries();
+                    m.setCompteur(m.getPanier().getTaillePanier());
+                }
+
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Attention cette action n'est pas valide");
@@ -75,8 +87,8 @@ public class Controleur implements ActionListener {
         }
         vue.setInfo(m.getPanier().toString());
     }
-    
-    public void clear(){
+
+    public void clear() {
         vue.setInfo(m.getPanier().clearAll());
         List<String> countries = m.getPanier().getOrigines();
         countries.clear();
@@ -88,8 +100,8 @@ public class Controleur implements ActionListener {
         vue.initPanier(donnees);
         m.setPanier(25);
     }
-    
-    public void updateCountries(){
+
+    public void updateCountries() {
         List<String> countries = m.getPanier().getOrigines();
         vue.initCountries(countries);
     }
@@ -104,7 +116,7 @@ public class Controleur implements ActionListener {
         updatePanier();
         updateCountries();
     }
-    
+
     public Fruit createFruit(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         Class<?> fruitClass = Class.forName(className);
         if (Fruit.class.isAssignableFrom(fruitClass)) {

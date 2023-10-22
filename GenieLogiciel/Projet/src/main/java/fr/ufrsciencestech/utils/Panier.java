@@ -1,6 +1,8 @@
 package fr.ufrsciencestech.utils;
 
 import fr.ufrsciencestech.panier.*;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.*;
 
 /**
@@ -112,14 +114,20 @@ public class Panier {
         }
     }
 
-    // groupe 6
     public double getPrix() { // calcule le prix du panier par addition des prix de tous les fruits contenus
         // dedans
         double prixTotal = 0.0;
         for (Fruit fruit : this.fruits) {
             prixTotal += fruit.getPrix();
         }
-        return prixTotal;
+
+        // Utiliser DecimalFormat avec la locale "en-US" pour formater le résultat
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+        DecimalFormat df = new DecimalFormat("0.00", symbols);
+        String formattedPrix = df.format(prixTotal);
+
+        // Convertir la chaîne formatée en double
+        return Double.parseDouble(formattedPrix);
     }
 
     // groupe 7
@@ -169,16 +177,12 @@ public class Panier {
         }
 
         HashSet<String> originesSansDoublons = new HashSet<>(originesDoublons);
-        
 
         return new ArrayList<>(originesSansDoublons);
     }
-    
+
     public List<String> getOrigines() {
         return this.origines = getOriginesSansDoublons();
     }
-    
-    
-    
 
 }

@@ -5,7 +5,6 @@
  */
 package fr.ufrsciencestech.model;
 
-
 import fr.ufrsciencestech.utils.ClassLister;
 import fr.ufrsciencestech.utils.Panier;
 import java.beans.PropertyChangeListener;
@@ -18,10 +17,11 @@ import java.util.Observable;
  *
  * @author Mamoudou
  */
-public class Modele extends Observable{
+public class Modele extends Observable {
 
     private int compteur;   //compteur toujours positif
     private Panier panier;
+    private String country;
 
     PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 
@@ -31,6 +31,7 @@ public class Modele extends Observable{
 
     public Modele() {
         compteur = 0;
+        country = "";
     }
 
     public void update(int incr) {
@@ -45,17 +46,18 @@ public class Modele extends Observable{
         //notifyObservers(getCompteur());   //if this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed
     }
 
+    
     public void reset() {
         int old = getCompteur();
         setCompteur(0);
         pcs.firePropertyChange("value", old, getCompteur());
     }
-    
-    public void setPanier(int contenanceMax){
+
+    public void setPanier(int contenanceMax) {
         panier = new Panier(contenanceMax);
     }
-    
-    public Panier getPanier(){
+
+    public Panier getPanier() {
         return this.panier;
     }
 
@@ -63,11 +65,10 @@ public class Modele extends Observable{
         List<String> donnees = new ArrayList<>();
 
         List<String> classNames = ClassLister.listClassNamesInPackage("fr.ufrsciencestech.panier");
-        
+
         for (String className : classNames) {
-            
-            if(!className.contains("Exception") && !className.contains("Fruit"))
-            {
+
+            if (!className.contains("Exception") && !className.contains("Fruit")) {
                 donnees.add(className);
             }
         }
@@ -83,7 +84,7 @@ public class Modele extends Observable{
 
     /**
      * @param compteur the compteur to set
-     * 
+     *
      */
     public void setCompteur(int compteur) {
         int old = this.compteur;
@@ -97,4 +98,18 @@ public class Modele extends Observable{
         //notifyObservers(getCompteur());   //if this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed
     }
 
+    public String getCountry() {
+        return country;
+    }
+    
+    public void setCountry(String country){
+        String old = this.country;
+        if (country == null) {
+            this.country = "Aucun pays selectionné";
+        }else{
+            this.country = country + " a été boycotté";
+        }
+
+        pcs.firePropertyChange("value", old, this.country);
+    }
 }
