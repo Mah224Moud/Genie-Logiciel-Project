@@ -25,8 +25,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JButton boycotte;
 
     private JLabel compteur;
-    private JLabel boycotteAffichage;
-    private JLabel boycotteInfo;
+    private JLabel info;
 
     private JPanel top;
     private JPanel topLeft;
@@ -37,7 +36,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JComboBox panierList;
     private JComboBox countryList;
 
-    private JTextArea info;
+    private JTextArea show;
 
     public VueGraphSwing() {
         super("Panier");
@@ -60,12 +59,11 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void instanciation() {
         inc = new JButton("+");
         dec = new JButton("-");
-        reset = new JButton("Reset");
+        reset = new JButton("Vider le panier");
         boycotte = new JButton("Boycotter");
 
         compteur = new JLabel("0", JLabel.CENTER);
-        boycotteAffichage = new JLabel("", JLabel.CENTER);
-        boycotteInfo = new JLabel("Liste des pays", JLabel.CENTER);
+        info = new JLabel("", JLabel.CENTER);
 
         top = new JPanel();
         bottom = new JPanel();
@@ -77,7 +75,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         countryList = new JComboBox();
         panierList = new JComboBox();
 
-        info = new JTextArea();
+        show = new JTextArea();
     }
 
     public void initComponent() {
@@ -86,7 +84,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         countryList.setModel(new DefaultComboBoxModel<>());
 
         // top panel
-        top.setLayout(new java.awt.GridLayout(1, 3));
+        top.setLayout(new BoxLayout(top, BoxLayout.LINE_AXIS));
         top.add(topLeft);
         top.add(emptyPanel);
         top.add(topRight);
@@ -98,27 +96,27 @@ public class VueGraphSwing extends JFrame implements VueG {
         topLeft.add(panierList);
 
         // topRight panel
-        topRight.setLayout(new java.awt.GridLayout(1, 3));
-        topRight.add(boycotteInfo);
+        topRight.setLayout(new java.awt.GridLayout(1, 2));
         topRight.add(countryList);
         topRight.add(boycotte);
         
         // topCenter panel
-        emptyPanel.setBackground(Color.gray);
+        //emptyPanel.setBackground(Color.gray);
+        emptyPanel.setPreferredSize(new Dimension(10, 1));
 
         // bottom panel
         bottom.setLayout(new java.awt.GridLayout(1, 3));
         bottom.add(compteur);
         bottom.add(reset);
-        bottom.add(boycotteAffichage);
+        bottom.add(info);
 
         // textarea
-        info.setEditable(false);
+        show.setEditable(false);
 
         // main panel
         add(top, BorderLayout.NORTH);
         add(bottom, BorderLayout.SOUTH);
-        add(info, BorderLayout.CENTER);
+        add(show, BorderLayout.CENTER);
     }
 
     public void initVariablesNames() {
@@ -126,7 +124,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         dec.setName("moins");
         reset.setName("reset");
         compteur.setName("Affichage");
-        info.setName("info");
+        show.setName("info");
         boycotte.setName("boycotte");
     }
 
@@ -175,7 +173,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     public void propertyChange(PropertyChangeEvent evt) {
         Modele m = (Modele) evt.getSource();
         getAffiche().setText(((Integer) m.getCompteur()).toString());
-        getBoycotteAffichage().setText(m.getCountry());
+        getInfo().setText(m.getInfo());
     }
 
     /**
@@ -236,12 +234,12 @@ public class VueGraphSwing extends JFrame implements VueG {
         this.panierList = panierList;
     }
 
-    public JTextArea getInfo() {
-        return info;
+    public JTextArea getShow() {
+        return show;
     }
 
-    public void setInfo(String text) {
-        info.setText(text);
+    public void setShow(String text) {
+        show.setText(text);
     }
 
     public JButton getBoycotte() {
@@ -260,20 +258,12 @@ public class VueGraphSwing extends JFrame implements VueG {
         this.compteur = compteur;
     }
 
-    public JLabel getBoycotteAffichage() {
-        return boycotteAffichage;
+    public JLabel getInfo() {
+        return info;
     }
 
-    public void setBoycotteAffichage(JLabel boycotteAffichage) {
-        this.boycotteAffichage = boycotteAffichage;
-    }
-
-    public JLabel getBoycotteInfo() {
-        return boycotteInfo;
-    }
-
-    public void setBoycotteInfo(JLabel boycotteInfo) {
-        this.boycotteInfo = boycotteInfo;
+    public void setInfo(JLabel info) {
+        this.info = info;
     }
 
     public JComboBox getCountryList() {

@@ -45,7 +45,7 @@ public class Panier {
             } else {
                 res.append("\nLe panier contient " + this.getTaillePanier() + " fruit");
             }
-            res.append(" avec une valeur total de ").append(this.getPrix()).append("€");
+            res.append(" sur "+this.getContenanceMax()+" avec une valeur total de ").append(this.getPrix()).append("€");
 
         } else {
             res.append("\nLe panier ne contient aucun fruit il est complètement vide !!!");

@@ -10,6 +10,7 @@ import fr.ufrsciencestech.view.*;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,31 +30,16 @@ public class Controleur implements ActionListener {
 
         switch (clicks) {
             case "plus":
-                if (!m.getPanier().estPlein()) {
-                    m.update(1);
-                }
                 add();
-                updateCountries();
                 break;
             case "moins":
-                m.update(-1);
                 del();
-                updateCountries();
                 break;
             case "reset":
-                m.reset();
                 clear();
                 break;
             case "boycotte":
-                String selectCountry = vue.getSelectedCountryItem();
-                m.setCountry(selectCountry);
-                if (selectCountry != null) {
-                    m.getPanier().boycotteOrigine(selectCountry);
-                    vue.setInfo(m.getPanier().toString());
-                    updateCountries();
-                    m.setCompteur(m.getPanier().getTaillePanier());
-                }
-
+                boycotte();
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Attention cette action n'est pas valide");
@@ -62,12 +48,15 @@ public class Controleur implements ActionListener {
 
     public void add() {
         String selectedClassName = vue.getSelectedPanierItem();
-        if (selectedClassName != null) {
+        if (selectedClassName != "Choisissez un fruit") {
             try {
                 Fruit fruit = createFruit("fr.ufrsciencestech.panier." + selectedClassName);
                 if (fruit != null) {
                     m.getPanier().ajout(fruit);
-                    vue.setInfo(m.getPanier().toString());
+                    vue.setShow(m.getPanier().toString());
+                    m.update(1);
+                    updateCountries();
+                    m.setInfo("");
                 }
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
                 ex.printStackTrace();
@@ -75,34 +64,58 @@ public class Controleur implements ActionListener {
                 JOptionPane.showMessageDialog(vue, ex.getMessage(), "Attention panier plein", 2);
                 Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, ex);
             }
+        } else {
+            m.setInfo(selectedClassName);
         }
     }
 
     public void del() {
         try {
             m.getPanier().retrait();
+            updateCountries();
+            m.update(-1);
         } catch (PanierVideException ex) {
             JOptionPane.showMessageDialog(vue, ex.getMessage(), "Attention panier vide", 2);
             Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, ex);
+            vue.setShow(ex.getMessage());
         }
-        vue.setInfo(m.getPanier().toString());
     }
 
     public void clear() {
-        vue.setInfo(m.getPanier().clearAll());
+        vue.setShow(m.getPanier().clearAll());
         List<String> countries = m.getPanier().getOrigines();
         countries.clear();
+        m.reset();
         vue.initCountries(countries);
+        m.setInfo("");
+    }
+
+    public void boycotte() {
+        String selectCountry = vue.getSelectedCountryItem();
+        m.setInfo(selectCountry);
+        if (selectCountry != "Choisissez un pays") {
+            m.getPanier().boycotteOrigine(selectCountry);
+            vue.setShow(m.getPanier().toString());
+            updateCountries();
+            m.setCompteur(m.getPanier().getTaillePanier());
+        }
     }
 
     public void updatePanier() {
-        List<String> donnees = m.getPanierList();
+        List<String> donnees = new ArrayList<>();
+
+        donnees.add("Choisissez un fruit");
+
+        donnees.addAll(m.getPanierList());
         vue.initPanier(donnees);
         m.setPanier(25);
     }
 
     public void updateCountries() {
-        List<String> countries = m.getPanier().getOrigines();
+        List<String> countries = new ArrayList<>();
+        countries.add("Choisissez un pays");
+
+        countries.addAll(m.getPanier().getOrigines());
         vue.initCountries(countries);
     }
 

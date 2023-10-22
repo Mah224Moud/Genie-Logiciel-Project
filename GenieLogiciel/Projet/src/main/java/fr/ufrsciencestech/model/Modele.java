@@ -21,7 +21,7 @@ public class Modele extends Observable {
 
     private int compteur;   //compteur toujours positif
     private Panier panier;
-    private String country;
+    private String info;
 
     PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 
@@ -31,7 +31,7 @@ public class Modele extends Observable {
 
     public Modele() {
         compteur = 0;
-        country = "";
+        info = "";
     }
 
     public void update(int incr) {
@@ -46,7 +46,6 @@ public class Modele extends Observable {
         //notifyObservers(getCompteur());   //if this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed
     }
 
-    
     public void reset() {
         int old = getCompteur();
         setCompteur(0);
@@ -98,18 +97,27 @@ public class Modele extends Observable {
         //notifyObservers(getCompteur());   //if this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed
     }
 
-    public String getCountry() {
-        return country;
+    public String getInfo() {
+        return info;
     }
-    
-    public void setCountry(String country){
-        String old = this.country;
-        if (country == null) {
-            this.country = "Aucun pays selectionné";
-        }else{
-            this.country = country + " a été boycotté";
-        }
 
-        pcs.firePropertyChange("value", old, this.country);
+    public void setInfo(String country) {
+        String old = this.info;
+
+        switch (country) {
+            case "":
+                this.info = "";
+                break;
+            case "Choisissez un pays":
+                this.info = "Vous n'avez sélectionner aucun pays !!!";
+                break;
+            case "Choisissez un fruit":
+                this.info = "Vous n'avez sélectionner aucun fruit !!!";
+                break;
+                
+            default:
+                this.info = country + " a été boycotté";
+        }
+        pcs.firePropertyChange("value", old, this.info);
     }
 }
