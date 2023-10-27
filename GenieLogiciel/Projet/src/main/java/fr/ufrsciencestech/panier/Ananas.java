@@ -2,6 +2,7 @@ package fr.ufrsciencestech.panier;
 
 /**
  * Classe Ananas
+  * @author salim1417
  */
 public class Ananas extends SimpleFruit {
 
