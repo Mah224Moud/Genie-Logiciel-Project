@@ -4,10 +4,48 @@
  */
 package fr.ufrsciencestech.panier;
 
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
 /**
  *
- * @author cristanemir
+ * @author salim1417
  */
 public class CeriseTest {
-    
+    Cerise c;
+
+    @Before
+    public void setUp() {
+        c = new Cerise(0.6, "Italie");
+    }
+
+    @Test
+    public void testGetPrix() {
+        assertEquals(0.6, c.getPrix(), 0.0);
+    }
+
+    @Test
+    public void testGetOrigine() {
+        assertEquals("Italie", c.getOrigine());
+    }
+
+    @Test
+    public void testToString() {
+        assertEquals("Cerise de Italie à 0.6 €", c.toString());
+    }
+
+    @Test
+    public void testIsSeedless() {
+        assertFalse(c.isSeedless());
+    }
+
+    @Test
+    public void testEquals() {
+        Cerise cerise1 = new Cerise(0.6, "Italie");
+        Cerise cerise2 = new Cerise(0.7, "Espagne");
+
+        assertTrue(c.equals(cerise1));
+        assertFalse(c.equals(cerise2));
+    }
 }
