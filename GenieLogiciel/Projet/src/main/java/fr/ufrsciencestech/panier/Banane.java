@@ -35,5 +35,5 @@ public class Banane extends SimpleFruit {
         } else {
             System.out.println("Test de l'origine échoué");
         }
-        
+    }
 }
