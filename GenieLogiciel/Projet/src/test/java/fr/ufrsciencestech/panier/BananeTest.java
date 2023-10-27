@@ -16,8 +16,6 @@ import org.junit.Test;
 public class BananeTest {
     Banane b;
     
-    public BananeTest(){
-    }
     
     @Before
     public void setUp() {
