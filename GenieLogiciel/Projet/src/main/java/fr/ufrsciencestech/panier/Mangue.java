@@ -6,7 +6,7 @@ package fr.ufrsciencestech.panier;
 
 /**
  *
- * @author mamoudou
+ * @author salim1417
  */
 public class Mangue extends SimpleFruit {
     public Mangue() {
@@ -21,4 +21,23 @@ public class Mangue extends SimpleFruit {
     public String toString() {
         return "Mangue du " + getOrigine() + " à " + getPrix() + " €";
     }
+
+     public static void main(String[] args) {
+        // Création d'une mangue pour les tests
+        Mangue mangue = new Mangue(1.5, "Honduras");
+
+         // Test fonctionnel : Vérification du prix
+        if (mangue.getPrix() == 1.5) {
+            System.out.println("Test du prix réussi");
+        } else {
+            System.out.println("Test du prix échoué");
+        }
+
+         // Test fonctionnel 2: Vérification de l'origine
+        if ("Honduras".equals(mangue.getOrigine())) {
+            System.out.println("Test de l'origine réussi");
+        } else {
+            System.out.println("Test de l'origine échoué");
+        }
+     }
 }
