@@ -6,7 +6,7 @@ package fr.ufrsciencestech.panier;
 
 /**
  *
- * @author mamoudou
+ * @author msalim1417
  */
 public class SimpleFruit implements Fruit{
     private double prix;
@@ -49,4 +49,51 @@ public class SimpleFruit implements Fruit{
         return false;
     }
 
+    public static void main(String[] args) {
+        // Création d'un fruit pour les tests
+        SimpleFruit fruit = new SimpleFruit(2.0, "France");
+
+        // Test 1: Vérification du prix
+        if (fruit.getPrix() == 2.0) {
+            System.out.println("Test du prix réussi");
+        } else {
+            System.out.println("Test du prix échoué");
+        }
+
+        // Test 2: Vérification de l'origine
+        if ("France".equals(fruit.getOrigine())) {
+            System.out.println("Test de l'origine réussi");
+        } else {
+            System.out.println("Test de l'origine échoué");
+        }
+
+        // Test 3: Vérification de la méthode toString
+        if ("Fruit de France a 2.0 euros".equals(fruit.toString())) {
+            System.out.println("Test de toString réussi");
+        } else {
+            System.out.println("Test de toString échoué");
+        }
+
+        // Test 4: Vérification de la méthode equals
+        SimpleFruit fruitIdentique = new SimpleFruit(2.0, "France");
+        SimpleFruit fruitDifferent = new SimpleFruit(3.0, "Espagne");
+        if (fruit.equals(fruitIdentique)) {
+            System.out.println("Test d'egalité avec un fruit identique réussi");
+        } else {
+            System.out.println("Test d'egalité avec un fruit identique échoué");
+        }
+        if (!fruit.equals(fruitDifferent)) {
+            System.out.println("Test d'egalité avec un fruit différent réussi");
+        } else {
+            System.out.println("Test d'egalité avec un fruit différent échoué");
+        }
+
+        // Test 5: Vérification de la méthode isSeedless
+        if (!fruit.isSeedless()) {
+            System.out.println("Test de isSeedless réussi");
+        } else {
+            System.out.println("Test de isSeedless échoué");
+        }
+    }
+    
 }
