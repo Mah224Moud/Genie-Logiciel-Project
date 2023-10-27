@@ -39,4 +39,5 @@ public class Fraise extends SimpleFruit{
         } else {
             System.out.println("Test de l'origine échoué");
         }
+    }
 }
