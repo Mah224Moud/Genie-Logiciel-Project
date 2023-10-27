@@ -37,5 +37,5 @@ public class Cerise extends SimpleFruit{
         } else {
             System.out.println("Test de l'origine échoué");
         }
-	
+    }
 }
