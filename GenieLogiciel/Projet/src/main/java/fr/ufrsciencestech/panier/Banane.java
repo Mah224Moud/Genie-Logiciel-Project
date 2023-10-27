@@ -2,7 +2,7 @@ package fr.ufrsciencestech.panier;
 
 /**
  *
- * @author mamoudou
+ * @author salim1417
  */
 public class Banane extends SimpleFruit {
 
