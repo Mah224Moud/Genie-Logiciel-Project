@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package fr.ufrsciencestech.utils;
+import static org.junit.Assert.*;
+import org.junit.Test;
+import java.util.List;
 
 /**
  *
@@ -10,4 +13,14 @@ package fr.ufrsciencestech.utils;
  */
 public class ClassListerTest {
     
+   @Test
+    public void testListClassNamesInPackage() {
+        String packageName = "fr.ufrsciencestech.panier"; // Modifiez pour correspondre à votre structure de packages
+
+        //la méthode qu'on veut tester
+        List<String> classNames = ClassLister.listClassNamesInPackage(packageName);
+        assertNotNull(classNames);
+        assertTrue(classNames.contains("Mangue"));
+        assertTrue(classNames.contains("SimpleFruit"));
+    }
 }
