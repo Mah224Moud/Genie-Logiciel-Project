@@ -3,42 +3,53 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+package fr.ufrsciencestech.panier;
+
 import static org.junit.Assert.*;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import fr.ufrsciencestech.panier.Ananas;
-package fr.ufrsciencestech.panier;
 
 
 public class AnanasTest {
-    Ananas ananas;
+    Ananas a;
 
     @Before
     public void setUp() {
-        ananas = new Ananas(0.5, "Brésil");
+        a = new Ananas(0.5, "Brésil");
     }
-     @Test
+
+     @After
+    public void tearDown() {
+        a = null;
+    }
+    
+      @Test
     public void testGetPrix() {
-        assertEquals(0.5, ananas.getPrix(), 0.0);
+        assertEquals(0.5, a.getPrix(), 0.0);
     }
+    
     @Test
     public void testGetOrigine() {
-        assertEquals("Brésil", ananas.getOrigine());
+        assertEquals("Brésil", a.getOrigine());
     }
-     @Test
+    
+    @Test
     public void testToString() {
-        assertEquals("Ananas du Brésil à 0.5 €", ananas.toString());
+        assertEquals("Ananas du Brésil à 0.5 €", a.toString());
     }
-     @Test
+    
+      @Test
     public void testIsSeedless() {
-        assertFalse(ananas.isSeedless());
+        assertFalse(a.isSeedless());
     }
+    
     @Test
     public void testEquals() {
-        Ananas Ananas1 = new Ananas(0.5, "Brésil");
-        Ananas Ananas2 = new Ananas(0.7, "Costa Rica");
+        Ananas ananas1 = new Ananas(0.5, "Brésil");
+        Ananas ananas2 = new Ananas(0.7, "Costa Rica");
 
-        assertTrue(ananas.equals(Ananas1));
-        assertFalse(ananas.equals(Ananas2));
+        assertTrue(a.equals(ananas1));
+        assertFalse(a.equals(ananas2));
     }
 }
