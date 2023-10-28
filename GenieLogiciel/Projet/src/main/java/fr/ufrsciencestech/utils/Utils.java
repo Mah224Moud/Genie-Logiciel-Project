@@ -44,7 +44,13 @@ public class Utils {
     }
 
     public static Fruit createFruit(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        return createFruitWithParams(className, 0.0, null);
+        Class<?> fruitClass = Class.forName(className);
+        if (Fruit.class.isAssignableFrom(fruitClass)) {
+            Fruit instance = (Fruit) fruitClass.newInstance();
+            return instance;
+        } else {
+            throw new IllegalArgumentException("La classe spécifiée ne doit pas être une sous-classe de Fruit.");
+        }
     }
 
     public static Fruit createFruitWithParams(String className, double prix, String origine) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
