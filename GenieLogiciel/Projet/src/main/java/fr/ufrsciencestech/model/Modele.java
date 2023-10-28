@@ -5,7 +5,7 @@
  */
 package fr.ufrsciencestech.model;
 
-import fr.ufrsciencestech.utils.ClassLister;
+import fr.ufrsciencestech.utils.Utils;
 import fr.ufrsciencestech.utils.Panier;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -63,7 +63,7 @@ public class Modele extends Observable {
     public List<String> getPanierList() {
         List<String> donnees = new ArrayList<>();
 
-        List<String> classNames = ClassLister.listClassNamesInPackage("fr.ufrsciencestech.panier");
+        List<String> classNames = Utils.listClassNamesInPackage("fr.ufrsciencestech.panier");
 
         for (String className : classNames) {
 
@@ -113,6 +113,15 @@ public class Modele extends Observable {
                 break;
             case "Choisissez un fruit":
                 this.info = "Vous n'avez sélectionner aucun fruit !!!";
+                break;
+            case "Country":
+                this.info = "L'origine que avez saisie est invalide !!!";
+                break;
+            case "Price":
+                this.info = "Le prix que avez saisie est invalide !!!";
+                break;
+            case "Country and price":
+                this.info = "L'origine et le prix sont obligatoires !!!";
                 break;
                 
             default:

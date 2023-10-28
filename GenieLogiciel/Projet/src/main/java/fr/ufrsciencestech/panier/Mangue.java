@@ -19,6 +19,6 @@ public class Mangue extends SimpleFruit {
 
     @Override
     public String toString() {
-        return "Mangue du " + getOrigine() + " à " + getPrix() + " €";
+        return "Mangue de " + getOrigine() + " à " + getPrix() + " €";
     }
 }

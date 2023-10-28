@@ -49,4 +49,14 @@ public class SimpleFruit implements Fruit{
         return false;
     }
 
+    @Override
+    public void setOrigine(String origine) {
+        this.origine = origine;
+    }
+
+    @Override
+    public void setPrix(Double prix) {
+        this.prix = prix;
+    }
+
 }
