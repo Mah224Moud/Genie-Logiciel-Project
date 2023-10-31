@@ -59,6 +59,7 @@ public class Utils {
             Fruit instance = (Fruit) fruitClass.newInstance();
             instance.setPrix(prix);
             instance.setOrigine(origine);
+            
             return instance;
         } else {
             throw new IllegalArgumentException("La classe spécifiée ne doit pas être une sous-classe de Fruit.");

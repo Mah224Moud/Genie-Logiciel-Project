@@ -8,6 +8,6 @@ package fr.ufrsciencestech.utils;
  *
  * @author cristanemir
  */
-public class ClassListerTest {
+public class UtilsTest {
     
 }
