@@ -145,6 +145,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         show.setName("info");
         boycotte.setName("boycotte");
         createFruit.setName("addFruitDlg");
+        quit.setName("quit");
     }
 
     public void initPanier(List<String> donnees) {
@@ -168,6 +169,11 @@ public class VueGraphSwing extends JFrame implements VueG {
         getReset().addActionListener(c);
         getBoycotte().addActionListener(c);
         getFruit().addActionListener(c);
+        getQuit().addActionListener(c);
+    }
+    
+    public void quit(){
+        this.dispose();
     }
 
     public String getSelectedPanierItem() {
@@ -296,6 +302,10 @@ public class VueGraphSwing extends JFrame implements VueG {
 
     public JMenuItem getFruit() {
         return createFruit;
+    }
+
+    public JMenuItem getQuit() {
+        return quit;
     }
     
     

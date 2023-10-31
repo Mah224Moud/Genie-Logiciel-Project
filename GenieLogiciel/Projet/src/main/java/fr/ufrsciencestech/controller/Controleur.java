@@ -46,8 +46,8 @@ public class Controleur implements ActionListener {
                 AddDlg addDlg = new AddDlg(vue, true, m.getPanierList(), m.getPanier(), this);
                 addDlg.setVisible(true);
                 break;
-            case "addToPanel":
-                System.out.println("yes");
+            case "quit":
+                vue.quit();
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Attention cette action n'est pas valide");
