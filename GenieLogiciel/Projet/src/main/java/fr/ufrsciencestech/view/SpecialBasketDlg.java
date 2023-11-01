@@ -215,6 +215,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
                         String selectedFruit = selectedRadio.getText();
                         info.setText(selectedFruit + " sélectionné");
                         updatePicIcon(selectedFruit);
+                        panier.setText("");
                     }
                 }
             });
@@ -238,6 +239,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
                         String selectedFruit = selectedCheckBox.getText();
                         info.setText(selectedFruit + " sélectionné");
                         updatePicIcon(selectedFruit);
+                        panier.setText("");
                     }
                 }
             });
