@@ -49,6 +49,10 @@ public class Controleur implements ActionListener {
             case "quit":
                 vue.quit();
                 break;
+            case "special":
+                SpecialBasketDlg special = new SpecialBasketDlg(vue, true, m.getPanierList());
+                special.setVisible(true);
+                break;
             default:
                 JOptionPane.showMessageDialog(null, "Attention cette action n'est pas valide");
         }
@@ -146,5 +150,5 @@ public class Controleur implements ActionListener {
     public VueGraphSwing getVue() {
         return vue;
     }
-    
+
 }

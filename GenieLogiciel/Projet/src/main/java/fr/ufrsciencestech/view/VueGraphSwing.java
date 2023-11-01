@@ -42,6 +42,7 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JMenu options;
     private JMenuItem quit;
     private JMenuItem createFruit;
+    private JMenuItem newPanier;
 
     public VueGraphSwing() {
         super("Panier");
@@ -85,7 +86,8 @@ public class VueGraphSwing extends JFrame implements VueG {
         menuBar = new JMenuBar();
         options = new JMenu("Options");
         quit = new JMenuItem("Quitter");;
-        createFruit = new JMenuItem("Créer un fruit");;
+        createFruit = new JMenuItem("Créer un fruit");
+        newPanier = new JMenuItem("Créer un panier");
     }
 
     public void initComponent() {
@@ -129,6 +131,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         this.setJMenuBar(menuBar);
         //option menu
         options.add(createFruit);
+        options.add(newPanier);
         options.add(quit);
 
         // main panel
@@ -146,6 +149,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         boycotte.setName("boycotte");
         createFruit.setName("addFruitDlg");
         quit.setName("quit");
+        newPanier.setName("special");
     }
 
     public void initPanier(List<String> donnees) {
@@ -170,6 +174,7 @@ public class VueGraphSwing extends JFrame implements VueG {
         getBoycotte().addActionListener(c);
         getFruit().addActionListener(c);
         getQuit().addActionListener(c);
+        getNewPanier().addActionListener(c);
     }
     
     public void quit(){
@@ -307,7 +312,8 @@ public class VueGraphSwing extends JFrame implements VueG {
     public JMenuItem getQuit() {
         return quit;
     }
-    
-    
 
+    public JMenuItem getNewPanier() {
+        return newPanier;
+    }
 }
