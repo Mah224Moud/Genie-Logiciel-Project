@@ -4,10 +4,48 @@
  */
 package fr.ufrsciencestech.panier;
 
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
 /**
  *
- * @author cristanemir
+ * @author salim1417
  */
 public class FraiseTest {
-    
+    Fraise f;
+
+    @Before
+    public void setUp() {
+        f = new Fraise(0.35, "Hawai");
+    }
+
+    @Test
+    public void testGetPrix() {
+        assertEquals(0.35, f.getPrix(), 0.0);
+    }
+
+    @Test
+    public void testGetOrigine() {
+        assertEquals("Hawai", f.getOrigine());
+    }
+
+    @Test
+    public void testToString() {
+        assertEquals("Fraise de Hawai à 0.35 €", f.toString());
+    }
+
+    @Test
+    public void testIsSeedless() {
+        assertFalse(f.isSeedless());
+    }
+
+    @Test
+    public void testEquals() {
+        Fraise fraise1 = new Fraise(0.35, "Hawai");
+        Fraise fraise2 = new Fraise(0.40, "Espagne");
+
+        assertTrue(f.equals(fraise1));
+        assertFalse(f.equals(fraise2));
+    }
 }
