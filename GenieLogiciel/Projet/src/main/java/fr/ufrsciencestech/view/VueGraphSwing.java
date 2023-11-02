@@ -37,6 +37,12 @@ public class VueGraphSwing extends JFrame implements VueG {
     private JComboBox countryList;
 
     private JTextArea show;
+    
+    private JMenuBar menuBar;
+    private JMenu options;
+    private JMenuItem quit;
+    private JMenuItem createFruit;
+    private JMenuItem newPanier;
 
     public VueGraphSwing() {
         super("Panier");
@@ -76,6 +82,12 @@ public class VueGraphSwing extends JFrame implements VueG {
         panierList = new JComboBox();
 
         show = new JTextArea();
+        
+        menuBar = new JMenuBar();
+        options = new JMenu("Options");
+        quit = new JMenuItem("Quitter");;
+        createFruit = new JMenuItem("Créer un fruit");
+        newPanier = new JMenuItem("Créer un panier");
     }
 
     public void initComponent() {
@@ -112,6 +124,15 @@ public class VueGraphSwing extends JFrame implements VueG {
 
         // textarea
         show.setEditable(false);
+        
+        //menu
+        menuBar.add(options);
+        
+        this.setJMenuBar(menuBar);
+        //option menu
+        options.add(createFruit);
+        options.add(newPanier);
+        options.add(quit);
 
         // main panel
         add(top, BorderLayout.NORTH);
@@ -126,6 +147,9 @@ public class VueGraphSwing extends JFrame implements VueG {
         compteur.setName("Affichage");
         show.setName("info");
         boycotte.setName("boycotte");
+        createFruit.setName("addFruitDlg");
+        quit.setName("quit");
+        newPanier.setName("special");
     }
 
     public void initPanier(List<String> donnees) {
@@ -148,6 +172,13 @@ public class VueGraphSwing extends JFrame implements VueG {
         getDec().addActionListener(c);
         getReset().addActionListener(c);
         getBoycotte().addActionListener(c);
+        getFruit().addActionListener(c);
+        getQuit().addActionListener(c);
+        getNewPanier().addActionListener(c);
+    }
+    
+    public void quit(){
+        this.dispose();
     }
 
     public String getSelectedPanierItem() {
@@ -274,4 +305,15 @@ public class VueGraphSwing extends JFrame implements VueG {
         this.countryList = countryList;
     }
 
+    public JMenuItem getFruit() {
+        return createFruit;
+    }
+
+    public JMenuItem getQuit() {
+        return quit;
+    }
+
+    public JMenuItem getNewPanier() {
+        return newPanier;
+    }
 }

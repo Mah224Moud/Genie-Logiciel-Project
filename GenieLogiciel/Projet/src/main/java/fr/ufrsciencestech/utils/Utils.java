@@ -1,5 +1,6 @@
 package fr.ufrsciencestech.utils;
 
+import fr.ufrsciencestech.panier.Fruit;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -11,7 +12,7 @@ import java.util.List;
  *
  * @author mamoudou
  */
-public class ClassLister {
+public class Utils {
 
     public static List<String> listClassNamesInPackage(String packageName) {
         List<String> classNames = new ArrayList<>();
@@ -40,6 +41,29 @@ public class ClassLister {
         }
 
         return classNames;
+    }
+
+    public static Fruit createFruit(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        Class<?> fruitClass = Class.forName(className);
+        if (Fruit.class.isAssignableFrom(fruitClass)) {
+            Fruit instance = (Fruit) fruitClass.newInstance();
+            return instance;
+        } else {
+            throw new IllegalArgumentException("La classe spécifiée ne doit pas être une sous-classe de Fruit.");
+        }
+    }
+
+    public static Fruit createFruitWithParams(String className, double prix, String origine) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        Class<?> fruitClass = Class.forName(className);
+        if (Fruit.class.isAssignableFrom(fruitClass)) {
+            Fruit instance = (Fruit) fruitClass.newInstance();
+            instance.setPrix(prix);
+            instance.setOrigine(origine);
+            
+            return instance;
+        } else {
+            throw new IllegalArgumentException("La classe spécifiée ne doit pas être une sous-classe de Fruit.");
+        }
     }
 
 }

@@ -1,11 +1,12 @@
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/PanierVideException.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/utils/Panier.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/view/VueG.java
+/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/view/AddDlg.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/PanierPleinException.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/SimpleFruit.java
-/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/utils/ClassLister.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/Orange.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/Cerise.java
+/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/utils/Utils.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/controller/Controleur.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/Ananas.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/Fraise.java
@@ -14,4 +15,5 @@
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/model/Modele.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/panier/Mangue.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/main/Main.java
+/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/view/SpecialBasketDlg.java
 /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java/fr/ufrsciencestech/view/VueGraphSwing.java

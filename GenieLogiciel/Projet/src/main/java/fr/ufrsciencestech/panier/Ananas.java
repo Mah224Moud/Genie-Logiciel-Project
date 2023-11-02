@@ -15,7 +15,7 @@ public class Ananas extends SimpleFruit {
 
     @Override
     public String toString() {
-        return "Ananas du " + getOrigine() + " à " + getPrix() + " €";
+        return "Ananas de " + getOrigine() + " à " + getPrix() + " €";
     }
     
 }

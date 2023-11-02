@@ -1,10 +1,10 @@
 fr/ufrsciencestech/view/VueGraphSwingTest.class
+fr/ufrsciencestech/utils/UtilsTest.class
 fr/ufrsciencestech/panier/OrangeTest.class
 fr/ufrsciencestech/controller/ControleurTest.class
 fr/ufrsciencestech/panier/MangueTest.class
 fr/ufrsciencestech/panier/AnanasTest.class
 fr/ufrsciencestech/model/ModeleTest.class
-fr/ufrsciencestech/utils/ClassListerTest.class
 fr/ufrsciencestech/panier/FraiseTest.class
 fr/ufrsciencestech/panier/SimpleFruitTest.class
 fr/ufrsciencestech/panier/BananeTest.class

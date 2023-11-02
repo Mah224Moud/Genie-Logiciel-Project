@@ -17,6 +17,6 @@ public class Orange extends SimpleFruit{
     }
     @Override
     public String toString(){
-        return "Orange des " + getOrigine() + " à " + getPrix() + " €";
+        return "Orange de " + getOrigine() + " à " + getPrix() + " €";
     }
 }

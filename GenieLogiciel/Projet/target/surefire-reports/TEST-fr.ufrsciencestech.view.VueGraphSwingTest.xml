@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.view.VueGraphSwingTest" time="1.409" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.649" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,10 +12,10 @@
     <property name="user.country" value="FR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter587505887324930125.jar /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-10-28T09-22-34_555-jvmRun1 surefire8476107186521322766tmp surefire_013932700148291544399tmp"/>
+    <property name="sun.java.command" value="/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter14659943347897737786.jar /Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-02T17-25-04_876-jvmRun1 surefire5603251310061306376tmp surefire_015396869064870417840tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="fr.ufrsciencestech.view.VueGraphSwingTest"/>
+    <property name="test" value="fr.ufrsciencestech.view.VueGraphSwingTest#testGetNewPanier"/>
     <property name="surefire.test.class.path" value="/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/Users/sow/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/sow/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/sow"/>
@@ -29,13 +29,13 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter587505887324930125.jar"/>
+    <property name="surefire.real.class.path" value="/Users/sow/Documents/prlg.logiciel/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter14659943347897737786.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.9+11-LTS-201"/>
     <property name="user.name" value="sow"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="13.5"/>
+    <property name="os.version" value="14.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
@@ -56,12 +56,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testGetIncButton" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="1.16"/>
-  <testcase name="testGetShowTextArea" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.052"/>
-  <testcase name="testGetPanierListComboBox" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.034"/>
-  <testcase name="testGetBoycotteButton" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.02"/>
-  <testcase name="testGetDecButton" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.029"/>
-  <testcase name="testGetCountryListComboBox" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.032"/>
-  <testcase name="testGetResetButton" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.034"/>
-  <testcase name="testGetCompteurLabel" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.035"/>
+  <testcase name="testGetNewPanier" classname="fr.ufrsciencestech.view.VueGraphSwingTest" time="0.633"/>
 </testsuite>

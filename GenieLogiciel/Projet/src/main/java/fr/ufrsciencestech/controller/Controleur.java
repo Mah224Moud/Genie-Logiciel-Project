@@ -5,6 +5,7 @@ import fr.ufrsciencestech.panier.Fruit;
 import fr.ufrsciencestech.panier.Orange;
 import fr.ufrsciencestech.panier.PanierPleinException;
 import fr.ufrsciencestech.panier.PanierVideException;
+import fr.ufrsciencestech.utils.Utils;
 import fr.ufrsciencestech.view.*;
 
 import java.awt.Component;
@@ -41,6 +42,17 @@ public class Controleur implements ActionListener {
             case "boycotte":
                 boycotte();
                 break;
+            case "addFruitDlg":
+                AddDlg addDlg = new AddDlg(vue, true, m.getPanierList(), m.getPanier(), this);
+                addDlg.setVisible(true);
+                break;
+            case "quit":
+                vue.quit();
+                break;
+            case "special":
+                SpecialBasketDlg special = new SpecialBasketDlg(vue, true, m.getPanierList());
+                special.setVisible(true);
+                break;
             default:
                 JOptionPane.showMessageDialog(null, "Attention cette action n'est pas valide");
         }
@@ -50,7 +62,7 @@ public class Controleur implements ActionListener {
         String selectedClassName = vue.getSelectedPanierItem();
         if (selectedClassName != "Choisissez un fruit") {
             try {
-                Fruit fruit = createFruit("fr.ufrsciencestech.panier." + selectedClassName);
+                Fruit fruit = Utils.createFruit("fr.ufrsciencestech.panier." + selectedClassName);
                 if (fruit != null) {
                     m.getPanier().ajout(fruit);
                     vue.setShow(m.getPanier().toString());
@@ -73,6 +85,7 @@ public class Controleur implements ActionListener {
         try {
             m.getPanier().retrait();
             updateCountries();
+            vue.setShow(m.getPanier().toString());
             m.update(-1);
         } catch (PanierVideException ex) {
             JOptionPane.showMessageDialog(vue, ex.getMessage(), "Attention panier vide", 2);
@@ -130,14 +143,12 @@ public class Controleur implements ActionListener {
         updateCountries();
     }
 
-    public Fruit createFruit(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        Class<?> fruitClass = Class.forName(className);
-        if (Fruit.class.isAssignableFrom(fruitClass)) {
-            Fruit instance = (Fruit) fruitClass.newInstance();
-            return instance;
-        } else {
-            throw new IllegalArgumentException("La classe spécifiée ne doit pas être une sous-classe de Fruit.");
-        }
+    public Modele getM() {
+        return m;
+    }
+
+    public VueGraphSwing getVue() {
+        return vue;
     }
 
 }
