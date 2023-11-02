@@ -48,6 +48,10 @@ public class SimpleFruit implements Fruit{
         }
         return false;
     }
+      @Override
+    public void setPrix(Double prix) {
+        this.prix = prix;
+    }
 
     public static void main(String[] args) {
         // Création d'un fruit pour les tests
@@ -95,12 +99,13 @@ public class SimpleFruit implements Fruit{
             System.out.println("Test de isSeedless échoué");
         }
     }
+
+    @Override
+    public void setOrigine(String origine) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
 
-    @Override
-    public void setPrix(Double prix) {
-        this.prix = prix;
-    }
 
-}
+

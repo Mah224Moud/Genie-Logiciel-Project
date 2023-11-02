@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.ufrsciencestech.panier.SimpleFruitTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in fr.ufrsciencestech.panier.SimpleFruitTest
+testToString(fr.ufrsciencestech.panier.SimpleFruitTest)  Time elapsed: 0 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Fruit de France [à 2.0 €]> but was:<Fruit de France [a 2.0 euros]>
+	at fr.ufrsciencestech.panier.SimpleFruitTest.testToString(SimpleFruitTest.java:40)
+
+testEquals(fr.ufrsciencestech.panier.SimpleFruitTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.ClassCastException: class fr.ufrsciencestech.panier.SimpleFruit cannot be cast to class fr.ufrsciencestech.panier.Banane (fr.ufrsciencestech.panier.SimpleFruit and fr.ufrsciencestech.panier.Banane are in unnamed module of loader 'app')
+	at fr.ufrsciencestech.panier.SimpleFruitTest.testEquals(SimpleFruitTest.java:48)
+

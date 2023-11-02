@@ -48,3 +48,4 @@ public class OrangeTest {
         assertTrue(o.equals(orange1));
         assertFalse(o.equals(orange2));
     }
+}
