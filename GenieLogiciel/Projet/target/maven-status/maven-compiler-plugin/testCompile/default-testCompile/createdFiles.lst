@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 fr\ufrsciencestech\utils\UtilsTest.class
+=======
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
 fr\ufrsciencestech\controller\ControleurTest.class
 fr\ufrsciencestech\utils\PanierTest.class
 fr\ufrsciencestech\panier\CeriseTest.class
@@ -10,3 +13,7 @@ fr\ufrsciencestech\panier\MangueTest.class
 fr\ufrsciencestech\panier\OrangeTest.class
 fr\ufrsciencestech\panier\SimpleFruitTest.class
 fr\ufrsciencestech\panier\FraiseTest.class
+<<<<<<< HEAD
+=======
+fr\ufrsciencestech\utils\ClassListerTest.class
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f

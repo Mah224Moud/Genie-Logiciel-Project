@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\PanierVideException.java
 C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\utils\Utils.java
 C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\model\Modele.java
@@ -17,3 +18,22 @@ C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\j
 C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Cerise.java
 C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Orange.java
 C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\utils\Panier.java
+=======
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Banane.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\utils\Panier.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\controller\Controleur.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Ananas.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\view\VueGraphSwing.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\view\VueG.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Mangue.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Fruit.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\PanierPleinException.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\PanierVideException.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\main\Main.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\SimpleFruit.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\model\Modele.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\utils\ClassLister.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Orange.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Cerise.java
+C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\src\main\java\fr\ufrsciencestech\panier\Fraise.java
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f

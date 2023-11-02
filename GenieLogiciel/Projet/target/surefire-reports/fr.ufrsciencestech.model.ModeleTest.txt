@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.model.ModeleTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s - in fr.ufrsciencestech.model.ModeleTest
+=======
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.056 s <<< FAILURE! - in fr.ufrsciencestech.model.ModeleTest
+testSetInfo(fr.ufrsciencestech.model.ModeleTest)  Time elapsed: 0.008 s  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<...us n'avez sélectionn[é] aucun pays !!!> but was:<...us n'avez sélectionn[er] aucun pays !!!>
+	at fr.ufrsciencestech.model.ModeleTest.testSetInfo(ModeleTest.java:69)
+
+testGetPanierList(fr.ufrsciencestech.model.ModeleTest)  Time elapsed: 0.004 s  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<0> but was:<12>
+	at fr.ufrsciencestech.model.ModeleTest.testGetPanierList(ModeleTest.java:60)
+
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f

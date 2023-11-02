@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.model.ModeleTest" time="0.052" tests="11" errors="0" skipped="0" failures="0">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.model.ModeleTest" time="0.056" tests="7" errors="0" skipped="0" failures="2">
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
+<<<<<<< HEAD
     <property name="java.class.path" value="C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\target\test-classes;C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\target\classes;C:\Users\DIALLO\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\DIALLO\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+=======
+    <property name="java.class.path" value="C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\target\test-classes;C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\target\classes;C:\Users\DIALLO\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\DIALLO\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
     <property name="java.vm.vendor" value="Azul Systems, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +23,17 @@
     <property name="user.country" value="FR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
+<<<<<<< HEAD
     <property name="sun.java.command" value="C:\Users\DIALLO\AppData\Local\Temp\surefire10988364780616274713\surefirebooter9440162272768919496.jar C:\Users\DIALLO\AppData\Local\Temp\surefire10988364780616274713 2023-11-02T23-01-15_880-jvmRun1 surefire558012225330547364tmp surefire_013249291033077561678tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="fr.ufrsciencestech.model.ModeleTest"/>
     <property name="surefire.test.class.path" value="C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\target\test-classes;C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet\target\classes;C:\Users\DIALLO\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\DIALLO\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+=======
+    <property name="sun.java.command" value="C:\Users\DIALLO\AppData\Local\Temp\surefire12446574568942499837\surefirebooter6321030397759422715.jar C:\Users\DIALLO\AppData\Local\Temp\surefire12446574568942499837 2023-10-27T22-34-33_226-jvmRun1 surefire11009466142002662445tmp surefire_09994426644963346645tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="fr.ufrsciencestech.model.ModeleTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\target\test-classes;C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet\target\classes;C:\Users\DIALLO\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\DIALLO\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\DIALLO"/>
     <property name="user.language" value="fr"/>
@@ -26,12 +41,20 @@
     <property name="java.version.date" value="2023-07-18"/>
     <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk"/>
     <property name="file.separator" value="\"/>
+<<<<<<< HEAD
     <property name="basedir" value="C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet"/>
+=======
+    <property name="basedir" value="C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet"/>
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+<<<<<<< HEAD
     <property name="surefire.real.class.path" value="C:\Users\DIALLO\AppData\Local\Temp\surefire10988364780616274713\surefirebooter9440162272768919496.jar"/>
+=======
+    <property name="surefire.real.class.path" value="C:\Users\DIALLO\AppData\Local\Temp\surefire12446574568942499837\surefirebooter6321030397759422715.jar"/>
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.2+9"/>
@@ -48,7 +71,11 @@
     <property name="java.vendor.url.bug" value="http://www.azul.com/support/"/>
     <property name="java.io.tmpdir" value="C:\Users\DIALLO\AppData\Local\Temp\"/>
     <property name="java.version" value="20.0.2"/>
+<<<<<<< HEAD
     <property name="user.dir" value="C:\Users\DIALLO\Downloads\Genie-Logiciel-Project\GenieLogiciel\Projet"/>
+=======
+    <property name="user.dir" value="C:\Users\DIALLO\Pictures\Genie-Logiciel-Project\GenieLogiciel\Projet"/>
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -61,6 +88,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
+<<<<<<< HEAD
   <testcase name="testAddObserver" classname="fr.ufrsciencestech.model.ModeleTest" time="0.007"/>
   <testcase name="testReset" classname="fr.ufrsciencestech.model.ModeleTest" time="0"/>
   <testcase name="testGetInfo" classname="fr.ufrsciencestech.model.ModeleTest" time="0"/>
@@ -72,4 +100,21 @@
   <testcase name="testUpdate" classname="fr.ufrsciencestech.model.ModeleTest" time="0"/>
   <testcase name="testGetPanierList" classname="fr.ufrsciencestech.model.ModeleTest" time="0.003"/>
   <testcase name="testConstructor" classname="fr.ufrsciencestech.model.ModeleTest" time="0"/>
+=======
+  <testcase name="testReset" classname="fr.ufrsciencestech.model.ModeleTest" time="0.005"/>
+  <testcase name="testSetCompteur" classname="fr.ufrsciencestech.model.ModeleTest" time="0"/>
+  <testcase name="testSetPanier" classname="fr.ufrsciencestech.model.ModeleTest" time="0.002"/>
+  <testcase name="testGetPanier" classname="fr.ufrsciencestech.model.ModeleTest" time="0.001"/>
+  <testcase name="testSetInfo" classname="fr.ufrsciencestech.model.ModeleTest" time="0.008">
+    <failure message="expected:&lt;...us n&apos;avez sélectionn[é] aucun pays !!!&gt; but was:&lt;...us n&apos;avez sélectionn[er] aucun pays !!!&gt;" type="junit.framework.ComparisonFailure"><![CDATA[junit.framework.ComparisonFailure: expected:<...us n'avez sélectionn[é] aucun pays !!!> but was:<...us n'avez sélectionn[er] aucun pays !!!>
+	at fr.ufrsciencestech.model.ModeleTest.testSetInfo(ModeleTest.java:69)
+]]></failure>
+  </testcase>
+  <testcase name="testUpdate" classname="fr.ufrsciencestech.model.ModeleTest" time="0"/>
+  <testcase name="testGetPanierList" classname="fr.ufrsciencestech.model.ModeleTest" time="0.004">
+    <failure message="expected:&lt;0&gt; but was:&lt;12&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: expected:<0> but was:<12>
+	at fr.ufrsciencestech.model.ModeleTest.testGetPanierList(ModeleTest.java:60)
+]]></failure>
+  </testcase>
+>>>>>>> 9a7f45224381b37862f8ff132c1724207f95402f
 </testsuite>
