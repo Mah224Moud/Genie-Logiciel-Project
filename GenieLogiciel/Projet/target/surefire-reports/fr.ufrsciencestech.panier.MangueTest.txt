@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: fr.ufrsciencestech.panier.MangueTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in fr.ufrsciencestech.panier.MangueTest
+testEquals(fr.ufrsciencestech.panier.MangueTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.ClassCastException: class fr.ufrsciencestech.panier.Mangue cannot be cast to class fr.ufrsciencestech.panier.Banane (fr.ufrsciencestech.panier.Mangue and fr.ufrsciencestech.panier.Banane are in unnamed module of loader 'app')
+	at fr.ufrsciencestech.panier.MangueTest.testEquals(MangueTest.java:48)
+

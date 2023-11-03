@@ -40,5 +40,4 @@ public class OrangeTest {
         assertFalse(o.isSeedless());
     }
 
-  
 }

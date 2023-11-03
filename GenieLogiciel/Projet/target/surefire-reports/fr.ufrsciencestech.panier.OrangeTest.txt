@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: fr.ufrsciencestech.panier.OrangeTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in fr.ufrsciencestech.panier.OrangeTest
+testEquals(fr.ufrsciencestech.panier.OrangeTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.ClassCastException: class fr.ufrsciencestech.panier.Orange cannot be cast to class fr.ufrsciencestech.panier.Banane (fr.ufrsciencestech.panier.Orange and fr.ufrsciencestech.panier.Banane are in unnamed module of loader 'app')
+	at fr.ufrsciencestech.panier.OrangeTest.testEquals(OrangeTest.java:48)
+
