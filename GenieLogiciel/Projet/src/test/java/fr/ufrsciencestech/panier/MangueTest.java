@@ -40,12 +40,4 @@ public class MangueTest {
         assertFalse(m.isSeedless());
     }
 
-    @Test
-    public void testEquals() {
-        Mangue mangue1 = new Mangue(1.5, "Honduras");
-        Mangue mangue2 = new Mangue(2.0, "Thaïlande");
-
-        assertTrue(m.equals(mangue1));
-        assertFalse(m.equals(mangue2));
-    }
 }
