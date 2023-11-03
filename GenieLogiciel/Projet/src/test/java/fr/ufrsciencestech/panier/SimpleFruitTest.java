@@ -35,7 +35,5 @@ public class SimpleFruitTest {
         assertEquals("France", fruit.getOrigine());
     }
 
-   
-
-    
+       
 }
