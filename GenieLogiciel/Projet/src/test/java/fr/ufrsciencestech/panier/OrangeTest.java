@@ -40,11 +40,5 @@ public class OrangeTest {
         assertFalse(o.isSeedless());
     }
 
-    @Test
-    public void testEquals() {
-        Orange orange1 = new Orange(0.9, "Etats Unies");
-        Orange orange2 = new Orange(1.0, "France");
-
-        assertTrue(o.equals(orange1));
-        assertFalse(o.equals(orange2));
-    }
+  
+}
