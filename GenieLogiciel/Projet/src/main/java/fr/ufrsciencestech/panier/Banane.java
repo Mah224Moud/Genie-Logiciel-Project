@@ -20,7 +20,7 @@ public class Banane extends SimpleFruit {
     }
     public static void main(String[] args) {
         // Création d'une banane pour les tests
-        Banane banane = new Banane();
+        Banane banane = new Banane(0.5, "Espagne");
         
         // Test fonctionnel : Vérification du prix
         if (banane.getPrix() == 0.5) {
