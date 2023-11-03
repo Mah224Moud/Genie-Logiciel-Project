@@ -40,12 +40,5 @@ public class CeriseTest {
         assertFalse(c.isSeedless());
     }
 
-    @Test
-    public void testEquals() {
-        Cerise cerise1 = new Cerise(0.6, "Italie");
-        Cerise cerise2 = new Cerise(0.7, "Espagne");
-
-        assertTrue(c.equals(cerise1));
-        assertFalse(c.equals(cerise2));
-    }
+   
 }

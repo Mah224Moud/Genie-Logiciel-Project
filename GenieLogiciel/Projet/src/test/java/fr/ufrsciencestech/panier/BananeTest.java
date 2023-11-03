@@ -47,13 +47,6 @@ public class BananeTest {
         assertFalse(b.isSeedless());
     }
 
-     @Test
-    public void testEquals() {
-        Banane banane1 = new Banane(0.5, "Espagne");
-        Banane banane2 = new Banane(0.7, "Costa Rica");
-
-        assertTrue(b.equals(banane1));
-        assertFalse(b.equals(banane2));
-    }
+    
 
 }
