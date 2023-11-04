@@ -71,6 +71,9 @@ public class Panier {
         return this.contenanceMax;
     }
 
+     public void setContenanceMax(int contenanceMax){  
+	this.contenanceMax = contenanceMax;
+    }
     // groupe 3
     public Fruit getFruit(int i) { // accesseur retournant le fruit contenu dans le panier a l'emplacement n°i ou
         // null s'il n'y a rien a cet emplacement
