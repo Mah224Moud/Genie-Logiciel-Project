@@ -17,7 +17,8 @@ import java.util.Observable;
  *
  * @author Mamoudou
  */
-public class Modele extends Observable {
+public class Modele //extends Observable 
+{
 
     private int compteur;   //compteur toujours positif
     private Panier panier;
@@ -25,9 +26,9 @@ public class Modele extends Observable {
 
     PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 
-    public void addObserver(PropertyChangeListener l) {
+   /* public void addObserver(PropertyChangeListener l) {
         pcs.addPropertyChangeListener("value", l);
-    }
+    }*/
 
     public Modele() {
         compteur = 0;

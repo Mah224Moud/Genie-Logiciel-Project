@@ -50,7 +50,10 @@ public class SimpleFruit implements Fruit{
     }
       @Override
     public void setPrix(Double prix) {
-        this.prix = prix;
+        if(prix < 0)
+	    this.prix = -prix; 
+	else
+	    this.prix = prix;
     }
 
     public static void main(String[] args) {
@@ -102,7 +105,7 @@ public class SimpleFruit implements Fruit{
 
     @Override
     public void setOrigine(String origine) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.origine=origine;    
     }
     
 }

@@ -32,7 +32,7 @@ public class ModeleTest {
         assertEquals("L'origine que avez saisie est invalide !!!", modele.getInfo());
     }
 
-    @Test
+    /*@Test
     public void testAddObserver() {
         Modele modele = new Modele();
         
@@ -45,7 +45,7 @@ public class ModeleTest {
         
         modele.update(5);
         assertEquals(1, changeCount[0]);
-    }
+    }*/
 
     @Test
     public void testGetCompteur() {

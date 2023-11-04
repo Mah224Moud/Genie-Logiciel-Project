@@ -51,9 +51,8 @@ public class Main {
         Modele modele = new Modele();
         vueg = new VueGraphSwing();  // Initialisez d'abord la vue
         controleur = new Controleur();
-
         controleur.setModele(modele); // Initialisez le modèle dans le contrôleur
-        modele.addObserver(vueg);
+       // modele.addObserver(vueg);
         vueg.addControleur(controleur);
         controleur.setVue(vueg);  // Assurez-vous que la vue est initialisée dans le contrôleur
     }
