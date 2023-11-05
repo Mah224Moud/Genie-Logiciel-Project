@@ -21,7 +21,7 @@ public class Fraise extends SimpleFruit{
     public String toString() {
         return "Fraise de " + this.getOrigine() + " à " + this.getPrix() + " €";
     }
-
+/*
     public static void main(String[] args) {
         // Création d'une fraise pour les tests
         Fraise fraise = new Fraise(0.35, "Hawai");
@@ -39,5 +39,5 @@ public class Fraise extends SimpleFruit{
         } else {
             System.out.println("Test de l'origine échoué");
         }
-    }
+    }*/
 }

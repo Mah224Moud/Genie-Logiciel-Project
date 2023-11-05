@@ -18,6 +18,9 @@ public class Ananas extends SimpleFruit {
     public String toString() {
         return "Ananas du " + getOrigine() + " à " + getPrix() + " €";
     }
+    
+    //tests fonctionnels
+    /*
      public static void main(String[] args) {
         // Création d'un ananas pour les tests
         Ananas ananas = new Ananas(0.5, "Brésil");
@@ -36,5 +39,5 @@ public class Ananas extends SimpleFruit {
             System.out.println("Test de l'origine échoué");
         }
 
-    }
+    }*/
 }

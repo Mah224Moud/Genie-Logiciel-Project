@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.utils.PanierTest" time="0.056" tests="12" errors="1" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.view.SpecialBasketDlgTest" time="0.122" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,9 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter14103793117979922416.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-05T15-17-48_673-jvmRun1 surefire16340853926132614948tmp surefire_071085443515802406tmp"/>
+    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter2171562540497445279.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-05T15-40-16_850-jvmRun1 surefire15507447610198028893tmp surefire_016609898202712491641tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="fr.ufrsciencestech.utils.PanierTest"/>
+    <property name="test" value="fr.ufrsciencestech.view.SpecialBasketDlgTest"/>
     <property name="surefire.test.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/cristanemir"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter14103793117979922416.jar"/>
+    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter2171562540497445279.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.8.1+1-Ubuntu-0ubuntu123.04"/>
     <property name="user.name" value="cristanemir"/>
@@ -53,28 +53,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testEstVide" classname="fr.ufrsciencestech.utils.PanierTest" time="0.002"/>
-  <testcase name="testGetContenanceMax" classname="fr.ufrsciencestech.utils.PanierTest" time="0.003">
-    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
-	at fr.ufrsciencestech.utils.PanierTest.testGetContenanceMax(PanierTest.java:102)
-</failure>
-    <system-out><![CDATA[getContenanceMax
-]]></system-out>
-  </testcase>
-  <testcase name="testEstPlein" classname="fr.ufrsciencestech.utils.PanierTest" time="0"/>
-  <testcase name="testAjout" classname="fr.ufrsciencestech.utils.PanierTest" time="0.001"/>
-  <testcase name="testGetPrix" classname="fr.ufrsciencestech.utils.PanierTest" time="0.002"/>
-  <testcase name="testGetPrixMock" classname="fr.ufrsciencestech.utils.PanierTest" time="0.029">
-    <error type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
-	at fr.ufrsciencestech.utils.PanierTest.testGetPrixMock(PanierTest.java:188)
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @2a35e31d
-	at fr.ufrsciencestech.utils.PanierTest.testGetPrixMock(PanierTest.java:188)
+  <testcase name="testGetSelectedFruitsFromCheckbox" classname="fr.ufrsciencestech.view.SpecialBasketDlgTest" time="0.101">
+    <error message="rows and cols cannot both be zero" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: rows and cols cannot both be zero
+	at fr.ufrsciencestech.view.SpecialBasketDlgTest.setUp(SpecialBasketDlgTest.java:34)
 </error>
   </testcase>
-  <testcase name="testRetrait" classname="fr.ufrsciencestech.utils.PanierTest" time="0"/>
-  <testcase name="testSetFruits" classname="fr.ufrsciencestech.utils.PanierTest" time="0"/>
-  <testcase name="testGetTaillePanier" classname="fr.ufrsciencestech.utils.PanierTest" time="0"/>
-  <testcase name="testGetFruits" classname="fr.ufrsciencestech.utils.PanierTest" time="0.001"/>
-  <testcase name="testEquals" classname="fr.ufrsciencestech.utils.PanierTest" time="0"/>
-  <testcase name="testSetFruit" classname="fr.ufrsciencestech.utils.PanierTest" time="0"/>
+  <testcase name="testGetSelectedFruitFromRadio" classname="fr.ufrsciencestech.view.SpecialBasketDlgTest" time="0.003">
+    <error message="rows and cols cannot both be zero" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: rows and cols cannot both be zero
+	at fr.ufrsciencestech.view.SpecialBasketDlgTest.setUp(SpecialBasketDlgTest.java:34)
+</error>
+  </testcase>
 </testsuite>

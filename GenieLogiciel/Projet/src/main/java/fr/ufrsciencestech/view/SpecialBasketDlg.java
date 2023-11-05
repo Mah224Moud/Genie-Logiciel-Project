@@ -53,7 +53,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
     private JTextArea panier;
 
     private List<JRadioButton> radioButtons;
-    private List<JCheckBox> checkboxButtons;
+    List<JCheckBox> checkboxButtons;
 
     public SpecialBasketDlg(JFrame parent, boolean modal, final List<String> fruits) {
         super(parent, modal);

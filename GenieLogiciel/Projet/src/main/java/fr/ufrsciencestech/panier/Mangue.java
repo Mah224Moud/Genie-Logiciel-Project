@@ -22,7 +22,8 @@ public class Mangue extends SimpleFruit {
         return "Mangue du " + getOrigine() + " à " + getPrix() + " €";
     }
 
-     public static void main(String[] args) {
+     //tests fonctionnels
+    /*public static void main(String[] args) {
         // Création d'une mangue pour les tests
         Mangue mangue = new Mangue(1.5, "Honduras");
 
@@ -39,5 +40,5 @@ public class Mangue extends SimpleFruit {
         } else {
             System.out.println("Test de l'origine échoué");
         }
-     }
+     }*/
 }

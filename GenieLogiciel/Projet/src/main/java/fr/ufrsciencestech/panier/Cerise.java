@@ -20,7 +20,9 @@ public class Cerise extends SimpleFruit{
     public String toString(){
         return "Cerise de " + this.getOrigine() + " à " + this.getPrix() + " €";
     }
-    public static void main(String[] args) {
+    
+    //tests fonctionnels
+   /* public static void main(String[] args) {
         // Création d'une cerise  pour les tests
         Cerise cerise = new Cerise(0.6, "Italie");
 
@@ -37,5 +39,5 @@ public class Cerise extends SimpleFruit{
         } else {
             System.out.println("Test de l'origine échoué");
         }
-    }
+    }*/
 }

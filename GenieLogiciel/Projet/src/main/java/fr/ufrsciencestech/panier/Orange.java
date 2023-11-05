@@ -19,8 +19,8 @@ public class Orange extends SimpleFruit{
     public String toString(){
         return "Orange des " + getOrigine() + " à " + getPrix() + " €";
     }
-
-    public static void main(String[] args) {
+//tests fonctionnels
+    /*public static void main(String[] args) {
         // Création d'une orange avec des paramètres pour les tests
         Orange orange = new Orange(0.9, "Etats Unies");
 
@@ -37,5 +37,5 @@ public class Orange extends SimpleFruit{
         } else {
             System.out.println("Test de l'origine échoué");
         }
-    }
+    }*/
 }

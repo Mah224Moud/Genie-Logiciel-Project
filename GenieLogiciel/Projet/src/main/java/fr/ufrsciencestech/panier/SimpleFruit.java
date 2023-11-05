@@ -55,8 +55,8 @@ public class SimpleFruit implements Fruit{
 	else
 	    this.prix = prix;
     }
-
-    public static void main(String[] args) {
+    //tests fonctionnels
+   /* public static void main(String[] args) {
         // Création d'un fruit pour les tests
         SimpleFruit fruit = new SimpleFruit(2.0, "France");
 
@@ -101,7 +101,7 @@ public class SimpleFruit implements Fruit{
         } else {
             System.out.println("Test de isSeedless échoué");
         }
-    }
+    }*/
 
     @Override
     public void setOrigine(String origine) {

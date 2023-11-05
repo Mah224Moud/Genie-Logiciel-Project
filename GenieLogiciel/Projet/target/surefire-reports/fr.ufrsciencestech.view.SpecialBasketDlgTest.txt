@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.ufrsciencestech.view.SpecialBasketDlgTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.122 s <<< FAILURE! - in fr.ufrsciencestech.view.SpecialBasketDlgTest
+testGetSelectedFruitsFromCheckbox(fr.ufrsciencestech.view.SpecialBasketDlgTest)  Time elapsed: 0.101 s  <<< ERROR!
+java.lang.IllegalArgumentException: rows and cols cannot both be zero
+	at fr.ufrsciencestech.view.SpecialBasketDlgTest.setUp(SpecialBasketDlgTest.java:34)
+
+testGetSelectedFruitFromRadio(fr.ufrsciencestech.view.SpecialBasketDlgTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalArgumentException: rows and cols cannot both be zero
+	at fr.ufrsciencestech.view.SpecialBasketDlgTest.setUp(SpecialBasketDlgTest.java:34)
+

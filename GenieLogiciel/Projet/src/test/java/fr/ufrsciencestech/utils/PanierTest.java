@@ -10,16 +10,21 @@ import static junit.framework.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import static org.mockito.Mockito.*;
+
 
 /**
  *
  * @author cristanemir
  */
 public class PanierTest {
+    
+
+
     Panier p;
 
     public PanierTest() {
-        p = new Panier(10);
+        p = new Panier(3);
     }
 
     @Before
@@ -54,6 +59,32 @@ public class PanierTest {
         fruits2.add(new Cerise());
         p.setFruits(fruits2);
         assertTrue(p.getTaillePanier() == fruits2.size());
+    }
+    
+    @Test
+    public void testGetPrix() throws PanierPleinException {
+   
+    double expResult = 0.0;
+    double result = p.getPrix(); //test avec la DT1 de getPrix
+    assertTrue(expResult == result); //oracle
+    //panier à un element à 0.50
+    Orange o1 = new Orange(0.50, "Espagne");
+    p.ajout(o1);
+    double expResult2 = 0.50;
+    double result2 = p.getPrix(); //test avec la DT2 de getPrix
+    assertTrue(expResult2 == result2);
+    //panier ou il reste une place
+    Orange o2 = new Orange(1.0, "France");
+    p.ajout(o2);
+    double expResult3 = 1.50;
+    double result3 = p.getPrix(); //test avec la DT3 de getPrix
+    assertTrue(expResult3 == result3);
+    //panier plein
+    Orange o3 = new Orange(1.5, "Italie");
+    p.ajout(o3);
+    double expResult4 = 3.0;
+    double result4 = p.getPrix(); //test avec la DT4 de getPrix
+    assertTrue(expResult4 == result4);
     }
 
     @Test
@@ -150,5 +181,24 @@ public class PanierTest {
       
         assertTrue(p3.equals(p2));
     }
-
+   
+    //test d'intégration
+    @Test
+    public void testGetPrixMock() throws PanierPleinException {
+    Panier panier = new Panier(3); //panier vide de cont. max = 3
+    Orange mocko1 = mock(Orange.class); //doublures
+    Orange mocko2 = mock(Orange.class);
+    when(mocko1.getPrix()).thenReturn(0.5); //comportements des doublures
+    when(mocko2.getPrix()).thenReturn(1.0);
+    panier.ajout(mocko1);
+    panier.ajout(mocko2);
+    double res = panier.getPrix(); 
+    //tests d’interaction :
+    verify(mocko1, times(1)).getPrix(); //getPrix() doit avoir été appelé
+    //exactement 1 fois sur mocko1
+    verify(mocko2, times(1)).getPrix();
+    assertTrue(res == 1.5); //oracle
+    }
+    
+     
 }

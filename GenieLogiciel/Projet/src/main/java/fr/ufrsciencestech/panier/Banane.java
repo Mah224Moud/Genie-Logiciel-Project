@@ -18,7 +18,8 @@ public class Banane extends SimpleFruit {
     public String toString() {
         return "Banane de " + this.getOrigine() + " à " + this.getPrix() + " €";
     }
-    public static void main(String[] args) {
+    //tests fonctionnels
+    /*public static void main(String[] args) {
         // Création d'une banane pour les tests
         Banane banane = new Banane(0.5, "Espagne");
         
@@ -35,5 +36,5 @@ public class Banane extends SimpleFruit {
         } else {
             System.out.println("Test de l'origine échoué");
         }
-    }
+    }*/
 }

@@ -53,6 +53,8 @@ public class AddDlgTest {
         panierList.setSelectedItem("Banane");
         assertEquals("Banane", panierList.getSelectedItem().toString());
     }
+    
+    
 
 }
 
