@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.controller.ControleurTest" time="0.054" tests="4" errors="4" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter3546148093987901562.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-04T22-44-05_979-jvmRun1 surefire915869601242788828tmp surefire_013283855158761653208tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="fr.ufrsciencestech.controller.ControleurTest"/>
+    <property name="surefire.test.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/cristanemir"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-08-24"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter3546148093987901562.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8.1+1-Ubuntu-0ubuntu123.04"/>
+    <property name="user.name" value="cristanemir"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.2.0-36-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="/snap/netbeans/84/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="localRepository" value="/home/cristanemir/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.8.1"/>
+    <property name="user.dir" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.vm.version" value="17.0.8.1+1-Ubuntu-0ubuntu123.04"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testAdd" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.037">
+    <error type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @2a35e31d
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+</error>
+  </testcase>
+  <testcase name="testDel" classname="fr.ufrsciencestech.controller.ControleurTest" time="0">
+    <error message="Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+</error>
+  </testcase>
+  <testcase name="testBoycotte" classname="fr.ufrsciencestech.controller.ControleurTest" time="0">
+    <error message="Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+</error>
+  </testcase>
+  <testcase name="testClear" classname="fr.ufrsciencestech.controller.ControleurTest" time="0">
+    <error message="Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+</error>
+  </testcase>
+</testsuite>

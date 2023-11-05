@@ -115,7 +115,14 @@ public class AddDlg extends JDialog implements VueG {
     public String getCountryInput() {
         return countryInput.getText().toString();
     }
-
+    
+    public JTextField getCountryInputs() {
+        return countryInput;
+    }
+    
+    public JTextField getPriceInputs() {
+        return priceInput;
+    }
     public String getPriceInput() {
         return priceInput.getText().toString();
     }
