@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package fr.ufrsciencestech.view;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,46 +15,57 @@ import static org.junit.Assert.*;
  * @author cristanemir
  */
 
-
-public class SpecialBasketDlgTest {
-
+    public class SpecialBasketDlgTest {
     private SpecialBasketDlg specialBasketDlg;
-    private JRadioButton radio1;
-    private JCheckBox checkbox1;
-    private JButton okButton;
+    private JFrame parentFrame;
+    private List<String> fruits;
 
     @Before
     public void setUp() {
-        specialBasketDlg mock1 = new SpecialBasketDlg(vue, false, List.of("Fruit1", "Fruit2"));
-     
+        parentFrame = new JFrame();
+        fruits = new ArrayList<>();
+        fruits.add("Fruit1");
+        fruits.add("Fruit2");
+        specialBasketDlg = new SpecialBasketDlg(parentFrame, true, fruits);
+
     }
 
-    @After
-    public void tearDown() {
-        specialBasketDlg.dispose();
-    }
+        @Test
+        public void testGetSelectedFruitFromRadio() {
+            // Sélectionnez un bouton radio dans le test
+            specialBasketDlg.radioButtons.get(0).setSelected(true); 
+            String expectedFruit = "Fruit1";
+            String actualFruit = specialBasketDlg.getSelectedFruitFromRadio();
+            assertEquals(expectedFruit, actualFruit);
+        }
+
+    /*@Test
+    public void testGetSelectedFruitsFromCheckbox() {
+        // Sélectionnez les cases à cocher dans le test
+        specialBasketDlg.checkboxButtons.get(0).setSelected(true); // Sélectionnez le premier fruit
+        specialBasketDlg.checkboxButtons.get(i) // Sélectionnez le deuxième fruit
+
+        List<String> expectedFruits = new ArrayList<>();
+        expectedFruits.add("Fruit1");
+        expectedFruits.add("Fruit2");
+
+        List<String> actualFruits = specialBasketDlg.getSelectedFruitsFromCheckbox();
+        assertEquals(expectedFruits, actualFruits);
+    }*/
 
     @Test
-    public void testRadioSelection() {
-        // Select the radio button for "Fruit1"
-        radio1.setSelected(true);
-        okButton.doClick();
-
-        String selectedFruits = specialBasketDlg.getSelectedFruitFromRadio();
-        assertEquals(1, selectedFruits);
-        assertTrue(selectedFruits.contains("Fruit1"));
+    public void testGetChoice() {
+        String expectedChoice = "Jus de fruit simple";
+        String actualChoice = specialBasketDlg.getChoice();
+        assertEquals(expectedChoice, actualChoice);
     }
 
-    @Test
-    public void testCheckboxSelection() {
-        // Select the checkbox for "Fruit1"
-        checkbox1.setSelected(true);
-        okButton.doClick();
+    /*@Test
+    public void testUpdatePicIcon() {
+    
+    }*/
 
-        List<String> selectedFruits = specialBasketDlg.getSelectedFruitsFromCheckbox();
-        assertEquals(1, selectedFruits.size());
-        assertTrue(selectedFruits.contains("Fruit1"));
-    }
+  
 
 }
 

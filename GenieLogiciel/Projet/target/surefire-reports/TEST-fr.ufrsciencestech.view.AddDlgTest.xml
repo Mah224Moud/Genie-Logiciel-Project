@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.view.AddDlgTest" time="0.154" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.view.AddDlgTest" time="0.156" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
+    <property name="java.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home/cristanemir/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/cristanemir/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/cristanemir/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/cristanemir/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
     <property name="java.vm.vendor" value="Private Build"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="Unknown"/>
@@ -12,10 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter8002321847427026383.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-05T19-33-25_147-jvmRun1 surefire6109849918432379114tmp surefire_010088401660351999953tmp"/>
+    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter16037964505481664057.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-06T21-47-00_164-jvmRun1 surefire7568549528501984677tmp surefire_011808058946358145645tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="fr.ufrsciencestech.view.AddDlgTest"/>
-    <property name="surefire.test.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
+    <property name="surefire.test.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home/cristanemir/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/cristanemir/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/cristanemir/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/cristanemir/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/cristanemir"/>
     <property name="user.language" value="fr"/>
@@ -28,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter8002321847427026383.jar"/>
+    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter16037964505481664057.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.8.1+1-Ubuntu-0ubuntu123.04"/>
     <property name="user.name" value="cristanemir"/>
@@ -53,8 +52,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testGetCountryInput" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.118"/>
-  <testcase name="testGetSelectedElement" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.008"/>
-  <testcase name="testGetPriceInput" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.003"/>
-  <testcase name="testGetAddFruit" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.003"/>
+  <testcase name="testGetCountryInput" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.124"/>
+  <testcase name="testGetSelectedElement" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.009"/>
+  <testcase name="testGetPriceInput" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.004"/>
+  <testcase name="testGetAddFruit" classname="fr.ufrsciencestech.view.AddDlgTest" time="0.004"/>
 </testsuite>

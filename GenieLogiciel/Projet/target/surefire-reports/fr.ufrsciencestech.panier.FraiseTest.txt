@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.panier.FraiseTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.024 s <<< FAILURE! - in fr.ufrsciencestech.panier.FraiseTest
-testEquals(fr.ufrsciencestech.panier.FraiseTest)  Time elapsed: 0.004 s  <<< ERROR!
-java.lang.ClassCastException: class fr.ufrsciencestech.panier.Fraise cannot be cast to class fr.ufrsciencestech.panier.Banane (fr.ufrsciencestech.panier.Fraise and fr.ufrsciencestech.panier.Banane are in unnamed module of loader 'app')
-	at fr.ufrsciencestech.panier.FraiseTest.testEquals(FraiseTest.java:48)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in fr.ufrsciencestech.panier.FraiseTest

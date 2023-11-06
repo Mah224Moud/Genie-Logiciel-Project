@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.controller.ControleurTest" time="0.054" tests="4" errors="4" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.ufrsciencestech.controller.ControleurTest" time="0.179" tests="6" errors="6" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
+    <property name="java.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home/cristanemir/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/cristanemir/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/cristanemir/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/cristanemir/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
     <property name="java.vm.vendor" value="Private Build"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="Unknown"/>
@@ -12,10 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter3546148093987901562.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-04T22-44-05_979-jvmRun1 surefire915869601242788828tmp surefire_013283855158761653208tmp"/>
+    <property name="sun.java.command" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter16037964505481664057.jar /home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire 2023-11-06T21-47-00_164-jvmRun1 surefire7568549528501984677tmp surefire_011808058946358145645tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="fr.ufrsciencestech.controller.ControleurTest"/>
-    <property name="surefire.test.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:"/>
+    <property name="surefire.test.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/test-classes:/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/classes:/home/cristanemir/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristanemir/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristanemir/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/home/cristanemir/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/cristanemir/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/cristanemir/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/cristanemir/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/cristanemir"/>
     <property name="user.language" value="fr"/>
@@ -28,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter3546148093987901562.jar"/>
+    <property name="surefire.real.class.path" value="/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/surefire/surefirebooter16037964505481664057.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.8.1+1-Ubuntu-0ubuntu123.04"/>
     <property name="user.name" value="cristanemir"/>
@@ -53,32 +52,42 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAdd" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.037">
-    <error type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @2a35e31d
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+  <testcase name="testActionPerformedVide" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.011">
+    <error message="Cannot invoke &quot;fr.ufrsciencestech.model.Modele.getPanier()&quot; because &quot;this.m&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanier()" because "this.m" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformedVide(ControleurTest.java:76)
+</error>
+    <system-out><![CDATA[actionPerformedVide
+]]></system-out>
+  </testcase>
+  <testcase name="testActionPerformed" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.069">
+    <error message="Cannot invoke &quot;fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()&quot; because &quot;this.vue&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformed(ControleurTest.java:45)
+</error>
+    <system-out><![CDATA[actionPerformed
+]]></system-out>
+  </testcase>
+  <testcase name="testAddWithInvalidFruit" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.011">
+    <error message="Cannot invoke &quot;fr.ufrsciencestech.model.Modele.getPanierList()&quot; because &quot;this.m&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanierList()" because "this.m" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testAddWithInvalidFruit(ControleurTest.java:106)
 </error>
   </testcase>
-  <testcase name="testDel" classname="fr.ufrsciencestech.controller.ControleurTest" time="0">
-    <error message="Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+  <testcase name="testActionPerformedSet" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.019">
+    <error message="Cannot invoke &quot;fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()&quot; because &quot;this.vue&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformedSet(ControleurTest.java:61)
 </error>
+    <system-out><![CDATA[actionPerformedSet
+]]></system-out>
   </testcase>
-  <testcase name="testBoycotte" classname="fr.ufrsciencestech.controller.ControleurTest" time="0">
-    <error message="Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+  <testcase name="testSetModele" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.012">
+    <error message="Cannot invoke &quot;fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()&quot; because &quot;this.vue&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testSetModele(ControleurTest.java:87)
 </error>
+    <system-out><![CDATA[setModele
+]]></system-out>
   </testcase>
-  <testcase name="testClear" classname="fr.ufrsciencestech.controller.ControleurTest" time="0">
-    <error message="Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+  <testcase name="testAddWithValidFruit" classname="fr.ufrsciencestech.controller.ControleurTest" time="0.057">
+    <error message="Cannot invoke &quot;fr.ufrsciencestech.model.Modele.getPanierList()&quot; because &quot;this.m&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanierList()" because "this.m" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testAddWithValidFruit(ControleurTest.java:95)
 </error>
   </testcase>
 </testsuite>

@@ -1,0 +1,24 @@
+-encoding
+'UTF-8'
+-protected
+-source
+'1.7'
+-sourcepath
+'/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Projet 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/7/docs/api' '/home/cristanemir/Bureau/netbeans/Genie-Logiciel-Project/GenieLogiciel/Projet/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Projet 1.0-SNAPSHOT API'

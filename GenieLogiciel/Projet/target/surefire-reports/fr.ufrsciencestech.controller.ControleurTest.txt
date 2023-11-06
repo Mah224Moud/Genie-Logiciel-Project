@@ -1,28 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.controller.ControleurTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.054 s <<< FAILURE! - in fr.ufrsciencestech.controller.ControleurTest
-testAdd(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.037 s  <<< ERROR!
-java.lang.ExceptionInInitializerError
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @2a35e31d
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.179 s <<< FAILURE! - in fr.ufrsciencestech.controller.ControleurTest
+testActionPerformedVide(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.011 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanier()" because "this.m" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformedVide(ControleurTest.java:76)
 
-testDel(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+testActionPerformed(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.069 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformed(ControleurTest.java:45)
 
-testBoycotte(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+testAddWithInvalidFruit(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.011 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanierList()" because "this.m" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testAddWithInvalidFruit(ControleurTest.java:106)
 
-testClear(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: Could not initialize class org.mockito.internal.creation.jmock.ClassImposterizer$3
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
-	at fr.ufrsciencestech.controller.ControleurTest.setUp(ControleurTest.java:30)
+testActionPerformedSet(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.019 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformedSet(ControleurTest.java:61)
+
+testSetModele(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.012 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testSetModele(ControleurTest.java:87)
+
+testAddWithValidFruit(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.057 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanierList()" because "this.m" is null
+	at fr.ufrsciencestech.controller.ControleurTest.testAddWithValidFruit(ControleurTest.java:95)
 

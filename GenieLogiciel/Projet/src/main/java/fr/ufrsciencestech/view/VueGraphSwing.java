@@ -189,6 +189,13 @@ public class VueGraphSwing extends JFrame implements VueG {
         return null;
     }
     
+    public void setSelectedPanierItem(String selectedItem) {
+        // Assurez-vous que le paramètre `selectedItem` est non null
+        if (selectedItem != null) {
+            panierList.setSelectedItem(selectedItem);
+        }
+    }
+    
     public String getSelectedCountryItem() {
         Object selectedItem = countryList.getSelectedItem();
         if (selectedItem != null) {

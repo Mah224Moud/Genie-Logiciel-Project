@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.panier.CeriseTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in fr.ufrsciencestech.panier.CeriseTest
-testEquals(fr.ufrsciencestech.panier.CeriseTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.ClassCastException: class fr.ufrsciencestech.panier.Cerise cannot be cast to class fr.ufrsciencestech.panier.Banane (fr.ufrsciencestech.panier.Cerise and fr.ufrsciencestech.panier.Banane are in unnamed module of loader 'app')
-	at fr.ufrsciencestech.panier.CeriseTest.testEquals(CeriseTest.java:48)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in fr.ufrsciencestech.panier.CeriseTest

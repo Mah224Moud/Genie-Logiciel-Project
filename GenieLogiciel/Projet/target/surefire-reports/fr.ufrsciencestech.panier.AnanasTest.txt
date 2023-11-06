@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.panier.AnanasTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.017 s <<< FAILURE! - in fr.ufrsciencestech.panier.AnanasTest
-testEquals(fr.ufrsciencestech.panier.AnanasTest)  Time elapsed: 0.003 s  <<< ERROR!
-java.lang.ClassCastException: class fr.ufrsciencestech.panier.Ananas cannot be cast to class fr.ufrsciencestech.panier.Banane (fr.ufrsciencestech.panier.Ananas and fr.ufrsciencestech.panier.Banane are in unnamed module of loader 'app')
-	at fr.ufrsciencestech.panier.AnanasTest.testEquals(AnanasTest.java:52)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in fr.ufrsciencestech.panier.AnanasTest

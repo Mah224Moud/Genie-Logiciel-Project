@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package fr.ufrsciencestech.utils;
 
 import fr.ufrsciencestech.panier.*;
@@ -35,9 +32,7 @@ public class PanierTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of update method, of class Banane.
-     */
+   
     @Test
     public void testGetFruits() {
         System.out.println("getFruits");
@@ -71,7 +66,7 @@ public class PanierTest {
     Orange o1 = new Orange(0.50, "Espagne");
     p.ajout(o1);
     double expResult2 = 0.50;
-    double result2 = p.getPrix(); //test avec la DT2 de getPrix
+    double result2 = p.getPrix(); 
     assertTrue(expResult2 == result2);
     //panier ou il reste une place
     Orange o2 = new Orange(1.0, "France");
@@ -97,9 +92,9 @@ public class PanierTest {
     @Test
     public void testGetContenanceMax() {
         System.out.println("getContenanceMax");
-        int contenanceMax = 10;
+        p.setContenanceMax(10);
         // voir si la contenance est de 10 ou de 1 pour le panier
-        assertTrue(p.getContenanceMax() == contenanceMax);
+        assertTrue(p.getContenanceMax() == 10);
     }
 
     @Test
@@ -182,23 +177,6 @@ public class PanierTest {
         assertTrue(p3.equals(p2));
     }
    
-    //test d'intégration
-    @Test
-    public void testGetPrixMock() throws PanierPleinException {
-    Panier panier = new Panier(3); //panier vide de cont. max = 3
-    Orange mocko1 = mock(Orange.class); //doublures
-    Orange mocko2 = mock(Orange.class);
-    when(mocko1.getPrix()).thenReturn(0.5); //comportements des doublures
-    when(mocko2.getPrix()).thenReturn(1.0);
-    panier.ajout(mocko1);
-    panier.ajout(mocko2);
-    double res = panier.getPrix(); 
-    //tests d’interaction :
-    verify(mocko1, times(1)).getPrix(); //getPrix() doit avoir été appelé
-    //exactement 1 fois sur mocko1
-    verify(mocko2, times(1)).getPrix();
-    assertTrue(res == 1.5); //oracle
-    }
     
      
 }

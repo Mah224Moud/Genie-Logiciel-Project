@@ -1,98 +1,119 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package fr.ufrsciencestech.controller;
-import fr.ufrsciencestech.panier.Fruit;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
-import javax.swing.JComboBox;
-import java.awt.Component;
 import java.awt.event.ActionEvent;
-import javax.swing.JButton;
 import fr.ufrsciencestech.model.Modele;
+import fr.ufrsciencestech.panier.Orange;
 import fr.ufrsciencestech.panier.PanierPleinException;
+import fr.ufrsciencestech.utils.*;
 import fr.ufrsciencestech.view.VueGraphSwing;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+
 
 /**
  *
  * @author cristanemir
  */
 public class ControleurTest {
-         private Controleur controleur;
-    private Modele modele;
-    private VueGraphSwing vue;
+    Controleur c1;
+    Controleur c2;
+    Modele m1, m2;
+    Panier panier;
+    Orange o;
+    VueGraphSwing vueg;
+    ActionEvent einc;
+    ActionEvent edec;
 
     @Before
-    public void setUp() {
-        modele = Mockito.mock(Modele.class);
-        vue = Mockito.mock(VueGraphSwing.class);
-        controleur = new Controleur();
-        controleur.setModele(modele);
-        controleur.setVue(vue);
+    public void setUp() throws PanierPleinException {
+         c1 = new Controleur();
+        c2 = new Controleur();
+        m1 = new Modele();
+        m2 = new Modele();
+        panier = new Panier(2); // Créez un panier fictif
+        o=new Orange(); 
+        vueg = new VueGraphSwing(); 
+        edec = new ActionEvent(vueg.getDec(), 1, "moins");
+        einc = new ActionEvent(vueg.getInc(), 0, "plus");
     }
+      @Test   //ignorer pour fonctionner dans Jenkins
+    public void testActionPerformed() {
+        System.out.println("actionPerformed");
 
-    @Test(expected = PanierPleinException.class)
-public void testAdd() throws PanierPleinException {
-    // Simuler une action de l'utilisateur
-    JComboBox<String> comboBox = new JComboBox<>(new String[] { "Banane", "Pomme" });
-    Mockito.when(vue.getSelectedPanierItem()).thenReturn("Banane");
-    Component source = (Component) comboBox;
+        assertTrue(m1.getCompteur() == 0);
+        c1.actionPerformed(einc);
+        assertTrue(m1.getCompteur() == 1);
 
-    ActionEvent actionEvent = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "plus");
-    controleur.actionPerformed(actionEvent);
-
-    // Vérifier que la méthode ajout du modèle a été appelée avec le fruit approprié
-    Mockito.verify(modele.getPanier()).ajout(Mockito.any(Fruit.class));
-}
-
-    @Test
-    public void testDel() {
-      // Simuler une action de l'utilisateur
-    JComboBox<String> comboBox = new JComboBox<>(new String[] { "Banane", "Pomme" });
-    Mockito.when(vue.getSelectedPanierItem()).thenReturn("Banane");
-    Component source = (Component) comboBox;
-
-    ActionEvent actionEvent = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "plus");
-
-    try {
-        controleur.actionPerformed(actionEvent);
+        c1.actionPerformed(edec);
+        assertTrue(m1.getCompteur() == 0);
+    }
+    
+    /**
+     * Test of actionPerformed method, of class Controleur.
+     */
+    @Test   //ignorer pour fonctionner dans Jenkins
+    public void testActionPerformedSet() {
+        System.out.println("actionPerformedSet");
+        assertTrue(m1.getCompteur() == 0);
+        m1.setCompteur(3);
         
-        // Vérifier que la méthode ajout du modèle a été appelée avec le fruit approprié
-        Mockito.verify(modele.getPanier()).ajout(Mockito.any(Fruit.class));
-    } catch (PanierPleinException e) {
-        // Gérez l'exception ici (par exemple, avec une assertion ou une autre action)
-        fail("L'exception PanierPleinException ne devrait pas être levée ici.");
+        c1.actionPerformed(einc);
+        assertTrue(m1.getCompteur() == 4);
+        
+        c1.actionPerformed(edec);
+        assertTrue(m1.getCompteur() == 3);
     }
+    
+    /**
+     * Test of actionPerformed method, of class Controleur.
+     */
+    @Test  //ignore pour fonctionner dans Jenkins
+    public void testActionPerformedVide() {
+        System.out.println("actionPerformedVide");
+        assertTrue(m1.getCompteur() == 0);
+        
+        c1.actionPerformed(edec);
+        assertTrue(m1.getCompteur() == 0);
+    }
+
+    /**
+     * Test of setPanier method, of class Controleur.
+     */
+    @Test  //ignore pour fonctionner dans Jenkins
+    public void testSetModele() {
+        System.out.println("setModele");
+        c1.setModele(m2);
+        c1.actionPerformed(einc);
+        assertTrue(m2.getCompteur() == 1);
+    }
+
+
+    @Test
+    public void testAddWithValidFruit() {
+
+        c1.setVue(vueg);
+        vueg.setSelectedPanierItem("Orange");
+        c1.add();
+        assertEquals("Le panier devrait contenir le fruit ajouté", 1, c1.getVue().getPanierList().getItemCount());
+   
     }
 
     @Test
-    public void testClear() {
-        // Simuler une action de l'utilisateur
-        JButton button = new JButton();
-        button.setName("reset");
-        Component source = button;
+    public void testAddWithInvalidFruit() {
+   
 
-        ActionEvent actionEvent = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "reset");
-        controleur.actionPerformed(actionEvent);
+        c1.setVue(vueg); 
 
-        // Vérifier que la méthode clearAll du modèle a été appelée
-        Mockito.verify(modele.getPanier()).clearAll();
+        // Exécution de la méthode add() avec un fruit invalide
+        vueg.setSelectedPanierItem("Choisissez un fruit");
+        c1.add();
+
+        // Assertions pour vérifier le comportement attendu
+        assertEquals("Le panier ne doit pas contenir de fruit si le choix est invalide", 0, c1.getVue().getPanierList().getItemCount());
+        
+      
     }
 
-    @Test
-    public void testBoycotte() {
-        // Simuler une action de l'utilisateur
-        JComboBox<String> comboBox = new JComboBox<>(new String[] { "France", "Espagne" });
-        Mockito.when(vue.getSelectedCountryItem()).thenReturn("France");
-        Component source = (Component) comboBox;
 
-        ActionEvent actionEvent = new ActionEvent(source, ActionEvent.ACTION_PERFORMED, "boycotte");
-        controleur.actionPerformed(actionEvent);
-
-        // Vérifier que la méthode boycotteOrigine du modèle a été appelée avec le pays approprié
-        Mockito.verify(modele.getPanier()).boycotteOrigine("France");
-    }
 }

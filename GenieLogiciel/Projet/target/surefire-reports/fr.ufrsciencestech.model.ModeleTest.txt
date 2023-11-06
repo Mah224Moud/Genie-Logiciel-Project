@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.model.ModeleTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s - in fr.ufrsciencestech.model.ModeleTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in fr.ufrsciencestech.model.ModeleTest
