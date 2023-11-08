@@ -27,35 +27,34 @@ import javax.swing.JTextArea;
 
 /**
  *
- * @author mamoudou
+ * @author cristan
  */
-public class SpecialBasketDlg extends JDialog implements VueG {
+public final class SpecialBasketDlg extends JDialog implements VueG {
 
     private JPanel top;
     private JPanel center;
     private JPanel centerLeft;
     private JPanel centerRight;
     private JPanel centerNorth;
-    private JPanel centerSouth;
+    JPanel centerSouth;
     private JPanel bottom;
 
     private JLabel choiceText;
     private JLabel northText;
     private JLabel info;
 
-    private JComboBox choice;
+    JComboBox choice;
 
     private String selectedChoice;
 
-    private JButton pic;
-    private JButton create;
+    JButton pic;
+    JButton create;
 
-    private JTextArea panier;
+    JTextArea panier;
 
     List<JRadioButton> radioButtons;
     List<JCheckBox> checkboxButtons;
-
-    /**
+        /**
      * This is the constructor for the SpecialBasketDlg class.
      * It sets up the dialog, initializes the components, and adds ActionListeners
      * to the choice JComboBox and the create JButton.
@@ -97,7 +96,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
                     String selectedFruit = getSelectedFruitFromRadio();
                     if (selectedFruit != null) {
                         panier.setText("\n\n\n\nVous venez préparer un jus de: " + selectedFruit);
-                        updatePicIcon("Jus " + selectedFruit);
+                        updatePicIcon("Jus "+selectedFruit);
                         info.setText("");
                     } else {
                         info.setText("Aucun fruit n'est sélectionné.");
@@ -107,8 +106,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
                     if (!selectedFruits.isEmpty()) {
                         if (choice.equals("Jus multifruit")) {
                             updatePicIcon("Jus multifruit");
-                            panier.setText(
-                                    "\n\n\n\nVous venez préparer un jus multifruit composé de:\n " + selectedFruits);
+                            panier.setText("\n\n\n\nVous venez préparer un jus multifruit composé de:\n " + selectedFruits);
                             info.setText("");
                         } else {
                             panier.setText("\n\n\n\nVous venez préparer une macédoine composé de:\n" + selectedFruits);
@@ -124,8 +122,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
         });
 
     }
-
-    /**
+     /**
      * This method instantiates the components used in the dialog.
      * It creates the panels, labels, combo box, buttons, and text area.
      * 
@@ -153,8 +150,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
 
         panier = new JTextArea();
     }
-
-    /**
+        /**
      * This method initializes the components used in the dialog.
      * It sets up the layout, size, and other properties of the components based on
      * the size of the list.
@@ -200,7 +196,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
 
     private void initVariablesNames() {
     }
-
+    
     /**
      * This method sets the specifications for the dialog view.
      * It sets the minimum size, title, and location of the dialog.
@@ -221,20 +217,18 @@ public class SpecialBasketDlg extends JDialog implements VueG {
     @Override
     public void addControleur(Controleur c) {
     }
-
-    /**
+        /**
      * This method initializes the choice JComboBox.
      * It adds the items to the choice JComboBox.
      *
      * @return void
      */
-    public void initChoice() {
+    void initChoice() {
         choice.addItem("Jus de fruit simple");
         choice.addItem("Jus multifruit");
         choice.addItem("Macédoine");
     }
-
-    /**
+        /**
      * This method creates a group of radio buttons for the list of fruits.
      * It removes all existing components from the centerSouth panel and clears the
      * radioButtons list.
@@ -272,8 +266,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
             radioButtons.add(radio);
         }
     }
-
-    /**
+        /**
      * This method creates a group of checkboxes for the list of fruits.
      * It removes all existing components from the centerSouth panel and clears the
      * checkboxButtons list.
@@ -309,8 +302,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
         }
 
     }
-
-    /**
+        /**
      * This method determines the type of selection to be used based on the type
      * parameter.
      * If the type is "Single fruit juice", it calls the radioBox method to create
@@ -322,7 +314,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
      * @param type   The type of selection to be used.
      * @return void
      */
-    public void choiceType(List<String> fruits, String type) {
+    void choiceType(List<String> fruits, String type) {
         if (type.equals("Jus de fruit simple")) {
             radioBox(fruits);
         } else {
@@ -332,8 +324,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
         revalidate();
         repaint();
     }
-
-    /**
+        /**
      * This method returns the currently selected choice.
      *
      * @return String The currently selected choice.
@@ -341,7 +332,6 @@ public class SpecialBasketDlg extends JDialog implements VueG {
     public String getChoice() {
         return this.selectedChoice;
     }
-
     /**
      * This method returns the text of the selected radio button from the
      * radioButtons list.
@@ -360,8 +350,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
         }
         return null;
     }
-
-    /**
+     /**
      * This method returns a list of the texts of the selected checkboxes from the
      * checkboxButtons list.
      * It creates a new list, then iterates over the checkboxButtons list and adds
@@ -379,8 +368,7 @@ public class SpecialBasketDlg extends JDialog implements VueG {
         }
         return selectedFruits;
     }
-
-    /**
+     /**
      * This method updates the icon of the pic JButton based on the selected fruit.
      * It creates a path to the image file based on the selected fruit, then creates
      * an ImageIcon from that file.
@@ -393,19 +381,29 @@ public class SpecialBasketDlg extends JDialog implements VueG {
      * @return void
      */
     public void updatePicIcon(String selectedFruit) {
-        if (selectedFruit != null) {
-            String imagePath = "/ufr/sciencestech/assets/" + selectedFruit + ".jpg";
-            ImageIcon originalIcon = new ImageIcon(getClass().getResource(imagePath));
-            Image originalImage = ((ImageIcon) originalIcon).getImage();
+    if (selectedFruit != null) {
+        String imagePath = "/ufr/sciencestech/assets/" + selectedFruit + ".jpg";
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource(imagePath));
+        Image originalImage = ((ImageIcon) originalIcon).getImage();
 
-            int width = pic.getWidth();
-            int height = pic.getHeight();
 
-            Image resizedImage = originalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+        int width = pic.getWidth();
+        int height = pic.getHeight();
 
-            Icon icon = new ImageIcon(resizedImage);
-            pic.setIcon(icon);
-        }
+
+        Image resizedImage = originalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+
+
+        Icon icon = new ImageIcon(resizedImage);
+        pic.setIcon(icon);
     }
 }
 
+    Object getRadioButtons() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    public JPanel getCenterSouth() {
+    return centerSouth;
+}
+
+}

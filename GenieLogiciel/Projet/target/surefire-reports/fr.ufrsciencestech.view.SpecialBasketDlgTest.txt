@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.view.SpecialBasketDlgTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.121 s <<< FAILURE! - in fr.ufrsciencestech.view.SpecialBasketDlgTest
-testGetSelectedFruitFromRadio(fr.ufrsciencestech.view.SpecialBasketDlgTest)  Time elapsed: 0.077 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "location" is null
-	at fr.ufrsciencestech.view.SpecialBasketDlgTest.testGetSelectedFruitFromRadio(SpecialBasketDlgTest.java:36)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s - in fr.ufrsciencestech.view.SpecialBasketDlgTest

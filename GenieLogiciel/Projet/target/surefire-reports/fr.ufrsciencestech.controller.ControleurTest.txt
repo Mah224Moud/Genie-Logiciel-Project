@@ -1,28 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.controller.ControleurTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.179 s <<< FAILURE! - in fr.ufrsciencestech.controller.ControleurTest
-testActionPerformedVide(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.011 s  <<< ERROR!
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.307 s <<< FAILURE! - in fr.ufrsciencestech.controller.ControleurTest
+testActionPerformedVide(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.01 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanier()" because "this.m" is null
 	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformedVide(ControleurTest.java:76)
 
-testActionPerformed(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.069 s  <<< ERROR!
+testActionPerformed(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.018 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
 	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformed(ControleurTest.java:45)
 
-testAddWithInvalidFruit(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.011 s  <<< ERROR!
+testAddWithInvalidFruit(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.05 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanierList()" because "this.m" is null
 	at fr.ufrsciencestech.controller.ControleurTest.testAddWithInvalidFruit(ControleurTest.java:106)
 
-testActionPerformedSet(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.019 s  <<< ERROR!
+testActionPerformedSet(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.066 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
 	at fr.ufrsciencestech.controller.ControleurTest.testActionPerformedSet(ControleurTest.java:61)
 
-testSetModele(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.012 s  <<< ERROR!
+testSetModele(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.056 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.view.VueGraphSwing.getSelectedPanierItem()" because "this.vue" is null
 	at fr.ufrsciencestech.controller.ControleurTest.testSetModele(ControleurTest.java:87)
 
-testAddWithValidFruit(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.057 s  <<< ERROR!
+testAddWithValidFruit(fr.ufrsciencestech.controller.ControleurTest)  Time elapsed: 0.106 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "fr.ufrsciencestech.model.Modele.getPanierList()" because "this.m" is null
 	at fr.ufrsciencestech.controller.ControleurTest.testAddWithValidFruit(ControleurTest.java:95)
 

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.ufrsciencestech.view.VueGraphSwingTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.564 s - in fr.ufrsciencestech.view.VueGraphSwingTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.517 s - in fr.ufrsciencestech.view.VueGraphSwingTest
